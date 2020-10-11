@@ -1,0 +1,39 @@
+#Atsarat-briut microservices
+
+PORTS AND NAME:
+user-service
+
+    server.port=8081
+    spring.application.name=user-service
+    
+    
+children-service
+
+    server.port=8082
+    spring.application.name=children-service
+    
+email-service
+    
+    server.port=8083
+    spring.application.name=email-service
+    
+scheduler-service
+
+    server.port=8084
+    spring.application.name=scheduler-service
+    
+school-service
+
+    server.port=8085
+    spring.application.name=school-service
+    
+tsofim-service
+
+    server.port=8086
+    spring.application.name=tsofim-service
+    
+gymnast-service
+
+    server.port=8087
+    spring.application.name=gymnast-service
+    
