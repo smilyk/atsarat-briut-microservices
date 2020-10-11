@@ -58,5 +58,6 @@
 	<module>gymnast-sarvice</module>
     <module>scheduler-service</module>
 	<module>user-service</module>
+	<module>email-service</module>
 </modules>
 </project>
