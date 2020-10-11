@@ -59,5 +59,6 @@
     <module>scheduler-service</module>
 	<module>user-service</module>
 	<module>email-service</module>
+	<module>children-service</module>
 </modules>
 </project>
