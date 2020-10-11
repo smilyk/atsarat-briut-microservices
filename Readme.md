@@ -37,3 +37,7 @@ gymnast-service
     server.port=8087
     spring.application.name=gymnast-service
     
+accept to actuator -> 
+
+    http://localhost:8082/monitor
+    good article: https://habr.com/ru/company/otus/blog/452624/
