@@ -57,5 +57,6 @@
 	<module>schools-service</module>
 	<module>gymnast-sarvice</module>
     <module>scheduler-service</module>
+	<module>user-service</module>
 </modules>
 </project>
