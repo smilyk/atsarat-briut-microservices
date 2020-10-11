@@ -54,5 +54,6 @@
 	</build>
 <modules>
 	<module>tsofim-service</module>
+	<module>schools-service</module>
 </modules>
 </project>
