@@ -55,5 +55,6 @@
 <modules>
 	<module>tsofim-service</module>
 	<module>schools-service</module>
+	<module>gymnast-sarvice</module>
 </modules>
 </project>
