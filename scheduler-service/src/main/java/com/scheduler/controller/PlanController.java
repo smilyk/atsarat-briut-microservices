@@ -7,6 +7,7 @@ import com.scheduler.dto.ResponsePlanDTO;
 import com.scheduler.enums.RequestOperationName;
 import com.scheduler.enums.RequestOperationStatus;
 import com.scheduler.services.planService.PlanService;
+import com.scheduler.services.shedulerService.Scheduler;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,8 @@ public class PlanController {
 
     @Autowired
     PlanService planService;
-//    @Autowired
-//    Scheduler scheduler;
+    @Autowired
+    Scheduler scheduler;
 
 
     @PostMapping()
@@ -88,10 +89,10 @@ public class PlanController {
         return new Response(returnValue, HttpServletResponse.SC_FOUND, currentDate);
     }
 
-//    @GetMapping(path = "1")
-//    public String check() {
-//        scheduler.scheduleCleanNotConfirmedEmail();
-//        return "done";
-//    }
+    @GetMapping(path = "1")
+    public String check() {
+        scheduler.scheduleCleanNotConfirmedEmail();
+        return "done";
+    }
 
 }

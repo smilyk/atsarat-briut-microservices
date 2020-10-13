@@ -92,6 +92,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+<!--		end of actuator-->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+<!--		rabbitMQ-->
+		<dependency>
+			<groupId> org.springframework.boot </groupId>
+			<artifactId> spring-boot-starter-amqp </artifactId>
+		</dependency>
+<!--end of rabbitMQ-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
