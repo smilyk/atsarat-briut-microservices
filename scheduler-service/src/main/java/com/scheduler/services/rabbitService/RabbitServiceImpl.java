@@ -9,10 +9,8 @@ import com.scheduler.enums.Services;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
-import org.springframework.amqp.core.DirectExchange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -24,31 +22,33 @@ import java.util.concurrent.TimeoutException;
 public class RabbitServiceImpl implements RabbitService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RabbitServiceImpl.class);
+    private static final String type = "direct";
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-
-//    @Value("${rabbitmq.exchange}")
-    String exchange = "atBriut";
+    @Value("${rabbitmq.exchange}")
+    String exchange;
     @Value("${tsofim.key}")
     String tsofimRoutingkey;
-    //    @Value("${school.rabbitmq.exchange}")
-//    String schoolExchange;
     @Value("${school.key}")
     String schoolRoutingkey;
-    //    @Value("${gymnast.rabbitmq.exchange}")
-//    String gymnastExchange;
     @Value("${gymnsat.key}")
     String gymnastRoutingkey;
 
-    @Bean
-    DirectExchange exchange() {
-        return new DirectExchange(exchange);
-    }
+    @Value(("${tsofim.queue}"))
+    String tsofimQueue;
+    @Value(("${school.queue}"))
+    String schoolQueue;
+    @Value(("${gymnsat.queue}"))
+    String gymnsatQueue;
+
+    @Value(("${spring.rabbitmq.username}"))
+    String rabbitUserName;
+    @Value(("${spring.rabbitmq.password}"))
+    String rabbitPassword;
 
     @Override
-
-    public void sendMessageToServer(PlanEntity record){
+    public void sendMessageToServer(PlanEntity record) {
         createQuene();
         LocalDateTime dateNow = LocalDateTime.now();
         Services service = record.getService();
@@ -73,18 +73,18 @@ public class RabbitServiceImpl implements RabbitService {
 
     private void createQuene() {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setPassword("password");
-        factory.setUsername("user");
+        factory.setPassword(rabbitPassword);
+        factory.setUsername(rabbitUserName);
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
-            channel.queueDeclare("TSOFIM", false, false, false, null);
-            channel.queueDeclare("SCHOOL", false, false, false, null);
-            channel.queueDeclare("GYMNAST", false, false, false, null);
-            String tsofim = "TSOFIM";
-            channel.exchangeDeclare(exchange, "direct", true);
-            channel.queueBind(tsofim, exchange, "ts");
-            channel.queueBind("SCHOOL", exchange, "sc");
-            channel.queueBind("GYMNAST", exchange, "gym");
+            channel.queueDeclare(tsofimQueue, false, false, false, null);
+            channel.queueDeclare(schoolQueue, false, false, false, null);
+            channel.queueDeclare(gymnsatQueue, false, false, false, null);
+
+            channel.exchangeDeclare(exchange, type, true);
+            channel.queueBind(tsofimQueue, exchange, tsofimRoutingkey);
+            channel.queueBind(schoolQueue, exchange, schoolRoutingkey);
+            channel.queueBind(gymnsatQueue, exchange, gymnastRoutingkey);
         } catch (TimeoutException e) {
             e.printStackTrace();
         } catch (IOException e) {
