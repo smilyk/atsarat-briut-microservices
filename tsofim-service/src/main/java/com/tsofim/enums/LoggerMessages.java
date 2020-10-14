@@ -32,4 +32,5 @@ package com.tsofim.enums;
      public static final String CHECK_UNIQ_CHILD_WITH_UUID = "child with provided uuid is unique. UuidChild: ";
      public static final String TSOFIM_DETAILS = " record with tsofim details for child ";
      public static final String LIST_OF_TSOFIM_DETAILS = " list of tsofim details ";
+     public static final String GET_ATSARAT_BRIUT = " created atsarat briut ";
  }

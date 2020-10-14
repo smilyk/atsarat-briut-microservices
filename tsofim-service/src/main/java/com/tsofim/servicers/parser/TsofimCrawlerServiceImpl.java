@@ -1,8 +1,10 @@
 package com.tsofim.servicers.parser;
 
+import com.tsofim.dto.EmailDto;
 import com.tsofim.entity.TsofimDetails;
 import com.tsofim.enums.ResponseMessages;
 import com.tsofim.repository.TsofimDetailsRepo;
+import com.tsofim.servicers.rabbitService.RabbitService;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -32,11 +34,13 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
 
     @Autowired
     TsofimDetailsRepo tsofimDetailsRepo;
+    @Autowired
+    RabbitService rabbitService;
     LocalDate start = LocalDate.now();
     private static final Logger LOGGER = LoggerFactory.getLogger(TsofimCrawlerServiceImpl.class);
 
     @Override
-    public String sendFormToTsofim() {
+    public String sendFormToTsofim(String uuidChild) {
 
         String uuid = "777";
         String childFirstNAme = "Liza";
@@ -92,7 +96,7 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
             }
         }
 
-        String classChild = tsofimDetails.getSchool().trim();
+        String classChild = tsofimDetails.getChildClass().trim();
         WebElement classChildElement = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[6]"));
         classChildElement.click();
         List<WebElement> childsElemenList = driver.findElements(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[6]/ul/li"));
@@ -124,19 +128,29 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]"));
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(scrFile, new File("screenshot.jpg"));
+            FileUtils.copyFile(scrFile, new File("screenshot_tsofim.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         driver.quit();
         LOGGER.info(start + ": -> " + "parse tsofim page with url: " + tsofimUrl);
+        String file = fileToBase64();
+        EmailDto emailDto = EmailDto.builder()
+                .email("")
+                .childFirstName("")
+                .childSecondName("")
+                .firstName("")
+                .lastName("")
+                .picture(file)
+                .build();
+        rabbitService.sendToEmailService(emailDto);
         return fileToBase64();
     }
 
     private String fileToBase64() {
         String encodeString = "";
         try {
-            byte[] file = FileUtils.readFileToByteArray(new File("screenshot.jpg"));
+            byte[] file = FileUtils.readFileToByteArray(new File("screenshot_tsofim.jpg"));
             encodeString = Base64.getEncoder().encodeToString(file);
 
         } catch (IOException e) {

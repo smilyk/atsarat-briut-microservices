@@ -92,9 +92,9 @@ public class TsofimController {
     }
 
 //parsing
-
-    @GetMapping("/parse")
-    public String parseSchool()  {
-       return tsofimCrawlerService.sendFormToTsofim();
-    }
+//
+//    @GetMapping("/parse")
+//    public String parseSchool()  {
+//       return tsofimCrawlerService.sendFormToTsofim(uuidChild);
+//    }
 }
