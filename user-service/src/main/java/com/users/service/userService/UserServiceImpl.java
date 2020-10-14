@@ -9,7 +9,9 @@ import com.users.utils.UserUtils;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -29,12 +31,19 @@ public class UserServiceImpl implements UserService {
     ModelMapper modelMapper = new ModelMapper();
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
+    @Value(("${email.exchange}"))
+    String emailExchange;
+    @Value(("${email.key}"))
+    String emailRoutingkey;
+
     @Autowired
     UserRepo userRepo;
     @Autowired
     UserUtils utils;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    private AmqpTemplate rabbitTemplate;
 
     @Override
     public Response addUser(AddUserDto user) {
@@ -44,8 +53,15 @@ public class UserServiceImpl implements UserService {
         userEntity.setPassword(bCryptPasswordEncoder.encode(user.getNotDecryptedPassword()));
         userEntity.setConfirmEmailToken(utils.generateEmailVerificationToken(utils.generateUserId().toString()));
         UserResponseDto userResponseDto = modelMapper.map(userEntity, UserResponseDto.class);
+        EmailVerificationDto emailDto = EmailVerificationDto.builder()
+                .email(userEntity.getMainEmail())
+                .tokenValue(userEntity.getConfirmEmailToken())
+                .userLastName(userEntity.getSecondName())
+                .userName(userEntity.getFirstName())
+                .build();
 //        method - send email
-//        LOGGER.info("verificatiWebSecurity on email was send to email " + storedUserDetails.getEmail());
+        rabbitTemplate.convertAndSend(emailExchange, emailRoutingkey, emailDto);
+        LOGGER.info("verificatiWebSecurity on email was send to email " + userResponseDto.getMainEmail());
         userRepo.save(userEntity);
         LOGGER.info(LoggerMessages.ADD_USER + ' ' + userEntity.getMainEmail());
         return new Response(userResponseDto, HttpServletResponse.SC_CREATED, currentDate);

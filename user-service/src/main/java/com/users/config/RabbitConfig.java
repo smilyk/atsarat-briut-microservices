@@ -1,4 +1,4 @@
-package com.email.config;
+package com.users.config;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -13,8 +13,6 @@ import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
-
-//import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 
 @Configuration
 public class RabbitConfig {
@@ -32,12 +30,6 @@ public class RabbitConfig {
     @Value(("${email.key}"))
     String emailRoutingkey;
 
-    @Value(("${conf.email.queue}"))
-    String confEmailQueue;
-    @Value(("${conf.email.key}"))
-    String confEmailRoutingkey;
-
-
 
 
     @Bean
@@ -50,21 +42,6 @@ public class RabbitConfig {
             channel.queueDeclare(emailQueue, false, false, false, null);
             channel.exchangeDeclare(emailExchange, type, true);
             channel.queueBind(emailQueue, emailExchange, emailRoutingkey);
-        } catch (TimeoutException | IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Bean
-    public void createConfEmailQueue() {
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setPassword(rabbitPassword);
-        factory.setUsername(rabbitUserName);
-        try (Connection connection = factory.newConnection();
-             Channel channel = connection.createChannel()) {
-            channel.queueDeclare(confEmailQueue, false, false, false, null);
-            channel.exchangeDeclare(emailExchange, type, true);
-            channel.queueBind(confEmailQueue, emailExchange, confEmailRoutingkey);
         } catch (TimeoutException | IOException e) {
             e.printStackTrace();
         }

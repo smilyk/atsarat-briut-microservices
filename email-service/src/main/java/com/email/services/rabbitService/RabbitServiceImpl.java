@@ -1,6 +1,7 @@
 package com.email.services.rabbitService;
 
 import com.email.dto.EmailDto;
+import com.email.dto.EmailVerificationDto;
 import com.email.enums.Services;
 import com.email.services.emailServices.EmailService;
 import org.slf4j.Logger;
@@ -17,6 +18,10 @@ public class RabbitServiceImpl implements RabbitService {
     @Autowired
     EmailService emailService;
 
+    @RabbitListener(queues = "${conf.email.queue}")
+    public void receivedConfirmationMessage(EmailVerificationDto incomingMessage) {
+        emailService.sendRegistrationEmail(incomingMessage);
+    }
 
     @RabbitListener(queues = "${email.queue}")
     public void receivedMessage(EmailDto incomingMessage) {
@@ -35,8 +40,6 @@ public class RabbitServiceImpl implements RabbitService {
                 LOGGER.error("Service: " + incomingMessage.getService() +
                         " not found");
                 break;
-
-
         }
     }
 }
