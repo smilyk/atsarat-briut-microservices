@@ -27,10 +27,6 @@ public class GymnastRabbitProducerConfig {
         return new Jackson2JsonMessageConverter();
     }
 
-    Binding binding(Queue queue, DirectExchange exchange, String routingkey) {
-        return BindingBuilder.bind(queue).to(exchange).with(routingkey);
-    }
-
     @Bean
     public AmqpTemplate rabbitTemplate(ConnectionFactory connectionFactory) {
         final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);

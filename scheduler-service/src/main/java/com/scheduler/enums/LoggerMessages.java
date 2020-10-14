@@ -30,4 +30,5 @@ package com.scheduler.enums;
      public static final String LIST_OF_PLANNING_DETAILS = " list off planning details";
      public static final String SCHEDULER_START = " scheduler started at: ";
      public static final String CHECKING_PLAN_RECORDS = " scheduler checking records for planning ";
+     public static final String SERVICE = " service for: ";
  }

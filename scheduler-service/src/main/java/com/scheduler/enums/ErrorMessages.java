@@ -16,8 +16,8 @@ public enum ErrorMessages {
     USER_WITH_UUID("User with provided uuid: "),
     RESP_PERS_WITH_UUID("Response person with provided uuid: "),
     NOT_FOUND(" not found "),
-    WITH_EMAIL("with e - mail ");
-
+    WITH_EMAIL("with e - mail "),
+    SERVICE("service for: ");
 
 
     private String errorMessage;

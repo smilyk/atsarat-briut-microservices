@@ -8,6 +8,7 @@ import com.scheduler.enums.RequestOperationName;
 import com.scheduler.enums.RequestOperationStatus;
 import com.scheduler.services.planService.PlanService;
 import com.scheduler.services.shedulerService.Scheduler;
+import com.scheduler.services.validatopService.ValidatorService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,12 +33,14 @@ public class PlanController {
     PlanService planService;
     @Autowired
     Scheduler scheduler;
+    @Autowired
+    ValidatorService validatorService;
 
 
     @PostMapping()
     public Response createPlanDetails(@Valid @RequestBody AddPlanDto planDetails) {
-//        TODO проверка валидатора - если чтоит день недели - должно стоять время
-//        validatorService.checkChildUuidUnique(tsofimDetails.getUuidChild());
+
+        validatorService.checkService(planDetails);
         return planService.addPlanDetails(planDetails);
     }
 
