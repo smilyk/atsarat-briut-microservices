@@ -41,19 +41,8 @@ public class RabbitConsumerConfig {
     String emailExchange;
     @Value(("${email.key}"))
     String emailRoutingkey;
-//    @Bean
-//    Queue queue() {
-//        return new Queue(queueName, false);
-//    }
-//    @Bean
-//    DirectExchange exchange() {
-//        return new DirectExchange(exchange);
-//    }
-//    @Bean
-//    Binding binding(Queue queue, DirectExchange exchange) {
-//        return BindingBuilder.bind(queue).to(exchange).with(routingkey);
-//    }
-@Bean
+
+    @Bean
     public void createGymnastQueue() {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setPassword(rabbitPassword);
