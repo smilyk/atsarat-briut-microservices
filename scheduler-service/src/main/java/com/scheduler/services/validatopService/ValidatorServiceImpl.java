@@ -11,10 +11,11 @@ import com.scheduler.services.planService.PlanServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
-import java.awt.*;
 
+@Service
 public class ValidatorServiceImpl implements ValidatorService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ValidatorServiceImpl.class);
     @Autowired
