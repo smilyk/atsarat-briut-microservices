@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface SchoolCrawlerService {
-    String sendFormToSchool();
+    String sendFormToSchool(String uuidChild);
 }

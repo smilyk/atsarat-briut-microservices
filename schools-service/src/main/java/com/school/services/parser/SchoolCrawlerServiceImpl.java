@@ -1,9 +1,11 @@
 package com.school.services.parser;
 
+import com.school.dto.EmailDto;
 import com.school.entity.SchoolDetails;
 import com.school.enums.ResponseMessages;
 import com.school.repository.SchoolDetailsRepo;
 import com.school.security.AES;
+import com.school.services.rabbit.RabbitService;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,11 +37,15 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
 
     @Autowired
     SchoolDetailsRepo schoolDetailsRepo;
+
+    @Autowired
+    RabbitService rabbitService;
+
     LocalDate start = LocalDate.now();
     @Override
-    public String sendFormToSchool() {
+    public String sendFormToSchool(String uuidChild) {
 //        LocalDate start = LocalDate.now();/
-        String uuid = "123";
+        String uuid = uuidChild;
 
         Optional<SchoolDetails> optionalSchoolDetails = schoolDetailsRepo.findByUuidChildAndDeleted(
                 uuid, false);
@@ -76,12 +82,22 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
 //TODO заполнить тофес
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(scrFile, new File("screenshot.jpg"));
+            FileUtils.copyFile(scrFile, new File("screenshot_school.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         driver.quit();
         LOGGER.info(start + ": -> " + "parse school page with url: " + schoolUrl);
+        String file = fileToBase64();
+        EmailDto emailDto = EmailDto.builder()
+                .email("")
+                .childFirstName("")
+                .childSecondName("")
+                .firstName("")
+                .lastName("")
+                .picture(file)
+                .build();
+        rabbitService.sendToEmailService(emailDto);
         return fileToBase64();
 
     }
@@ -89,7 +105,7 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
     private String fileToBase64() {
         String encodeString = "";
         try {
-            byte[] file = FileUtils.readFileToByteArray(new File("screenshot.jpg"));
+            byte[] file = FileUtils.readFileToByteArray(new File("screenshot_school.jpg"));
             encodeString = Base64.getEncoder().encodeToString(file);
 
         } catch (IOException e) {

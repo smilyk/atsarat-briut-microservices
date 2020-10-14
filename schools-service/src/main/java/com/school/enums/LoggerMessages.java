@@ -30,4 +30,5 @@ package com.school.enums;
      public static final String CHILD = " child ";
      public static final String LIST_OF_CHILD_DETAILS = " list of child details ";
      public static final String CHECK_UNIQ_CHILD_WITH_UUID = "child with provided uuid is unique. UuidChild: ";
+     public static final String GET_ATSARAT_BRIUT = " created atsarat briut ";
  }

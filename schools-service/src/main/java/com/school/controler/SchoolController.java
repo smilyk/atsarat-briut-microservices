@@ -96,8 +96,8 @@ public class SchoolController {
 
 //parsing
 
-    @GetMapping("/parse")
-    public String parseSchool()  {
-       return schoolCrawlerService.sendFormToSchool();
-    }
+//    @GetMapping("/parse")
+//    public String parseSchool()  {
+//       return schoolCrawlerService.sendFormToSchool(uuidChild);
+//    }
 }
