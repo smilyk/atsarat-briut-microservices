@@ -2,6 +2,7 @@ package com.email.dto;
 
 
 
+import com.email.enums.Services;
 import lombok.*;
 
 @AllArgsConstructor
@@ -9,13 +10,14 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class ConfirmationDto {
+public class EmailDto {
     String userName;
     String userLastName;
     String childFirstName;
     String childSecondName;
     String email;
     String picture;
+    Services service;
 
 
 }

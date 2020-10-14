@@ -32,6 +32,9 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
     @Value("secretPassword")
     String secretWord;
 
+    @Value("${service}")
+    private String service;
+
     @Autowired
     TsofimDetailsRepo tsofimDetailsRepo;
     @Autowired
@@ -136,12 +139,13 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
         LOGGER.info(start + ": -> " + "parse tsofim page with url: " + tsofimUrl);
         String file = fileToBase64();
         EmailDto emailDto = EmailDto.builder()
-                .email("")
-                .childFirstName("")
-                .childSecondName("")
-                .firstName("")
-                .lastName("")
+                .email("smilyk1982@gmail.com")
+                .childFirstName("FIRSTNAME")
+                .childSecondName("SECINDNAME")
+                .firstName("FATHERNAME")
+                .lastName("FATHERSECONDNAME")
                 .picture(file)
+                .service(service)
                 .build();
         rabbitService.sendToEmailService(emailDto);
         return fileToBase64();

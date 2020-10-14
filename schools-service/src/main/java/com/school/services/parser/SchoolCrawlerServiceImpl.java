@@ -35,6 +35,9 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
     @Value("secretPassword")
     String secretWord;
 
+    @Value("${service}")
+    private String service;
+
     @Autowired
     SchoolDetailsRepo schoolDetailsRepo;
 
@@ -96,6 +99,7 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
                 .firstName("")
                 .lastName("")
                 .picture(file)
+                .service(service)
                 .build();
         rabbitService.sendToEmailService(emailDto);
         return fileToBase64();

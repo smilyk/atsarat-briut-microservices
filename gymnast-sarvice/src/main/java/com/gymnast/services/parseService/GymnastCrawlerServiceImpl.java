@@ -19,10 +19,11 @@ import java.util.Base64;
 public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
     @Value("${url.gymnast}")
     private String gymnastUrl;
+    @Value("${service}")
+    private String service;
 
     @Autowired
     RabbitService rabbitService;
-
 
     @Override
     public String sendFormToGymnast(String uuidChild) {
@@ -58,6 +59,7 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
                 .childSecondName("")
                 .firstName("")
                 .lastName("")
+                .service(service)
                 .picture(file)
                 .build();
         rabbitService.sendToEmailService(emailDto);

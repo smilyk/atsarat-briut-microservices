@@ -15,4 +15,5 @@ public class EmailDto {
     String firstName ;
     String childFirstName ;
     String childSecondName ;
+    String service;
 }
