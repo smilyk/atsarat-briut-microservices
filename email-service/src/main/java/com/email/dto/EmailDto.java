@@ -18,6 +18,4 @@ public class EmailDto {
     String email;
     String picture;
     Services service;
-
-
 }

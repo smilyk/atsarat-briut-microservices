@@ -34,10 +34,7 @@ public class EmailServiceImpl implements EmailService {
     String adminEmail;
     @Autowired
     Environment env;
-    @Autowired
-    EmailService emailService;
-    @Autowired
-    RabbitService rabbitService;
+
 
     @Override
     public String sendRegistrationEmail(EmailVerificationDto mail) {
@@ -76,7 +73,7 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error("verification email: something is wrong" + ex);
             emailError(adminEmail, VERIFICATION_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator");
+            LOGGER.error("send error-email to administrator"+ mail);
             System.out.println(ex.getMessage());
         }
         return "Email send!";
@@ -117,7 +114,7 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error("gymnast atsarat briut email: something is wrong" + ex);
             emailError(adminEmail, GYMNAST_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator");
+            LOGGER.error("send error-email to administrator"+ mail);
             System.out.println(ex.getMessage());
             return "Error -> email not send";
         }
@@ -158,7 +155,7 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error("scgool Ben Gurion atsarat briut email: something is wrong" + ex);
             emailError(adminEmail,SCHOOL_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator");
+            LOGGER.error("send error-email to administrator"+ mail);
             System.out.println(ex.getMessage());
         }
         return "Email send!";
@@ -199,7 +196,7 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error(" tsofim atsarat briut email: something is wrong" + ex);
             emailError(adminEmail, TSOFIM_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator");
+            LOGGER.error("send error-email to administrator" + mail);
             System.out.println(ex.getMessage());
             return "Error -> email not send";
         }
