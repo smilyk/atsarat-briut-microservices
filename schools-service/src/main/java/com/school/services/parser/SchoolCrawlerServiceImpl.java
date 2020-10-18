@@ -73,15 +73,15 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
         WebElement makeDocument = driver.findElement(
                 By.xpath("/html[1]/body[1]/form[1]/main[1]/div[2]/div[1]/div[1]/div[1]/a[1]"));
         WebDriverWait wait = new WebDriverWait(driver, 60); //here, wait time is 40 seconds
-        wait.until(ExpectedConditions.visibilityOf(makeDocument));
+        wait.until(webDriver -> ExpectedConditions.visibilityOf(makeDocument));
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
         makeDocument.click();
 //        WebDriverWait wait2 = new WebDriverWait(driver, 300);
         WebElement x = driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]"));
         WebDriverWait wait1 = new WebDriverWait(driver, 60);
-        wait1.until(ExpectedConditions.visibilityOf(x));
+        wait1.until(webDriver -> ExpectedConditions.visibilityOf(x));
         wait1 = new WebDriverWait(driver, 60); //here, wait time is 120 seconds
-        wait1.until(ExpectedConditions.visibilityOf(x));
+        wait1.until(webDriver -> ExpectedConditions.visibilityOf(x));
 //TODO заполнить тофес
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {

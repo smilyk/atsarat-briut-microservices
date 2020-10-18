@@ -65,9 +65,12 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
 //        parsing start
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement button1 = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/a[1]/button[1]"));
-        WebDriverWait wait = new WebDriverWait(driver, 60); //here, wait time is 40 seconds
-        wait.until(ExpectedConditions.visibilityOf(button1));
-        button1.click();
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+//                .until(webDriver -> {
+//            ExpectedConditions.visibilityOf(button1).apply(webDriver);
+//        }); //here, wait time is 40 seconds
+        wait.until(webDriver -> ExpectedConditions.visibilityOf(button1));
+
 
         driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/input[1]")).sendKeys(
                 childFirstNAme + " " + childSecondName
