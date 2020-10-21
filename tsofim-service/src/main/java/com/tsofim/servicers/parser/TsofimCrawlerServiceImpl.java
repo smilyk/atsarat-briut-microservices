@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -25,6 +26,7 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@RefreshScope
 public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
     @Value("${url.tsofim}")
     private String tsofimUrl;

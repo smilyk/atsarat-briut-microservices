@@ -1,13 +1,13 @@
 package com.gymnast.services.parseService;
 
 import com.gymnast.dto.EmailDto;
-import com.gymnast.services.parseService.GymnastCrawlerService;
 import com.gymnast.services.rabbitService.RabbitService;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -16,6 +16,7 @@ import java.time.LocalDate;
 import java.util.Base64;
 
 @Service
+@RefreshScope
 public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
     @Value("${url.gymnast}")
     private String gymnastUrl;

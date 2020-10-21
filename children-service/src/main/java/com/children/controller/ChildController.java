@@ -8,6 +8,7 @@ import com.children.services.validator.ValidatorService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import java.util.List;
 
 
 @RestController
+@RefreshScope
 @RequestMapping("/child/v1")
 public class ChildController {
     private String currentDate = LocalDateTime.now().toLocalDate().toString();

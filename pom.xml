@@ -117,6 +117,12 @@
             <version>2.2.3.RELEASE</version>
         </dependency>
 <!--        end of config-->
+<!--        spring cloud bus-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+<!--        end of spring cloud bus-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-test</artifactId>-->

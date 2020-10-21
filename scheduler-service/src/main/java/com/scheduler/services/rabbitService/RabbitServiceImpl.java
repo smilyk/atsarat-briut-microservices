@@ -8,12 +8,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
 @Service
-
+@RefreshScope
 public class RabbitServiceImpl implements RabbitService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RabbitServiceImpl.class);

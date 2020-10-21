@@ -8,15 +8,18 @@ import com.users.service.validatorService.ValidatorServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.lang.reflect.Type;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/users/v1")
 public class UserController {
     private String currentDate = LocalDateTime.now().toLocalDate().toString();
@@ -29,6 +32,7 @@ public class UserController {
     @PostMapping()
     public Response createUser(@Valid @RequestBody AddUserDto userDetails) {
         validatorService.checkUniqueEmail(userDetails.getMainEmail());
+        List<AddRespPersonDto> x = new ArrayList<>();
         return userService.addUser(userDetails);
     }
 

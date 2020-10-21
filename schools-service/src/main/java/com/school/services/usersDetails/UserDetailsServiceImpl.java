@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RefreshScope
 public class UserDetailsServiceImpl implements UserDetailsService {
     ModelMapper modelMapper = new ModelMapper();
     private static final Logger LOGGER = LoggerFactory.getLogger(UserDetailsServiceImpl.class);

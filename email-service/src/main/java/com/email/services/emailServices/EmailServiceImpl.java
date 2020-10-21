@@ -3,11 +3,11 @@ package com.email.services.emailServices;
 import com.email.controller.EmailController;
 import com.email.dto.EmailDto;
 import com.email.dto.EmailVerificationDto;
-import com.email.services.rabbitService.RabbitService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.ClassPathResource;
@@ -20,6 +20,7 @@ import javax.mail.internet.MimeMessage;
 import java.time.LocalDateTime;
 import java.util.Base64;
 @Service
+@RefreshScope
 public class EmailServiceImpl implements EmailService {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmailController.class);
     public static final String APPLICATION_NAME = " Atsarat Briut ";

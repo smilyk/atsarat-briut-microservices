@@ -8,6 +8,7 @@ import com.users.service.validatorService.ValidatorServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
+@RefreshScope
 @RequestMapping("/resp_pers/v1")
 public class RespPersonController {
     private String currentDate = LocalDateTime.now().toLocalDate().toString();
