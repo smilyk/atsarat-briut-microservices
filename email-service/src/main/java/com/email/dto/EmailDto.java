@@ -11,11 +11,12 @@ import lombok.*;
 @Setter
 @Builder
 public class EmailDto {
-    String userName;
-    String userLastName;
+
     String childFirstName;
     String childSecondName;
     String email;
     String picture;
     Services service;
+    String lastName ;
+    String firstName ;
 }

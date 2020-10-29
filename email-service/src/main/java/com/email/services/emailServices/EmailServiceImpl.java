@@ -84,10 +84,22 @@ public class EmailServiceImpl implements EmailService {
     public String sendGymnastEmail(EmailDto mail) {
         String email = mail.getEmail();
         String picture = mail.getPicture();
-        String lastName = mail.getUserLastName();
-        String firstName = mail.getUserName();
+        String lastName = mail.getLastName();
+        if(lastName == null){
+            lastName = " ";
+        }
+        String firstName = mail.getFirstName();
+        if(firstName == null) {
+            firstName = " ";
+        }
         String childFirstName = mail.getChildFirstName();
+        if(childFirstName == null){
+            childFirstName = " ";
+        }
         String childSecondName = mail.getChildSecondName();
+        if(childSecondName == null){
+            childSecondName = " ";
+        }
 
         MimeMessage msg = emailSender.createMimeMessage();
         MimeMessageHelper helper = null;
@@ -126,10 +138,22 @@ public class EmailServiceImpl implements EmailService {
     public String sendSchoolEmail(EmailDto mail) {
         String email = mail.getEmail();
         String picture = mail.getPicture();
-        String lastName = mail.getUserLastName();
-        String firstName = mail.getUserName();
+        String lastName = mail.getLastName();
+        if(lastName == null){
+            lastName = " ";
+        }
+        String firstName = mail.getFirstName();
+        if(firstName == null) {
+            firstName = " ";
+        }
         String childFirstName = mail.getChildFirstName();
+        if(childFirstName == null){
+            childFirstName = " ";
+        }
         String childSecondName = mail.getChildSecondName();
+        if(childSecondName == null){
+            childSecondName = " ";
+        }
 
         MimeMessage msg = emailSender.createMimeMessage();
         MimeMessageHelper helper = null;
@@ -166,10 +190,22 @@ public class EmailServiceImpl implements EmailService {
     public String sendTsofimEmail(EmailDto mail) {
         String email = mail.getEmail();
         String picture = mail.getPicture();
-        String lastName = mail.getUserLastName();
-        String firstName = mail.getUserName();
+        String lastName = mail.getLastName();
+        if(lastName == null){
+            lastName = " ";
+        }
+        String firstName = mail.getFirstName();
+        if(firstName == null) {
+            firstName = " ";
+        }
         String childFirstName = mail.getChildFirstName();
+        if(childFirstName == null){
+            childFirstName = " ";
+        }
         String childSecondName = mail.getChildSecondName();
+        if(childSecondName == null){
+            childSecondName = " ";
+        }
 
         MimeMessage msg = emailSender.createMimeMessage();
         MimeMessageHelper helper = null;
