@@ -1,11 +1,15 @@
 package com.tsofim.servicers.parser;
 
 import com.tsofim.dto.EmailDto;
+import com.tsofim.dto.Response;
 import com.tsofim.entity.TsofimDetails;
 import com.tsofim.enums.ResponseMessages;
 import com.tsofim.repository.TsofimDetailsRepo;
+import com.tsofim.servicers.hystrix.ChildHystrixDto;
+import com.tsofim.servicers.hystrix.ChildServiceClient;
 import com.tsofim.servicers.rabbitService.RabbitService;
 import org.apache.commons.io.FileUtils;
+import org.modelmapper.ModelMapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -36,6 +40,8 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
 
     @Value("${service}")
     private String service;
+    @Autowired
+    ChildServiceClient childServiceClient;
 
     @Autowired
     TsofimDetailsRepo tsofimDetailsRepo;
@@ -43,22 +49,30 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
     RabbitService rabbitService;
     LocalDate start = LocalDate.now();
     private static final Logger LOGGER = LoggerFactory.getLogger(TsofimCrawlerServiceImpl.class);
+    ModelMapper modelMapper = new ModelMapper();
 
     @Override
     public String sendFormToTsofim(String uuidChild) {
+        Response childHystrix = childServiceClient.getChildByChildUuid(uuidChild);
+        ChildHystrixDto child = modelMapper.map(childHystrix.getContent(), ChildHystrixDto.class);
+        String childFirstNAme = child.getFirstName();
+        String childSecondName = child.getSecondName();
+        String childTZ = child.getChildTz();
+        String childParentUuid = child.getUuidParent();
+        String respPerson = child.getUuidRespPers();
+        String parentUuid = childParentUuid;
+        if (respPerson != null) {
+            parentUuid = respPerson;
+        }
 
-        String uuid = "777";
-        String childFirstNAme = "Liza";
-        String childSecondName = "HREW";
-        String chikldTZ = "111111111";
         String parentFirstName = "787878";
         String parentSecondNAme = "90909";
         String parentTZ = "333333333";
 
         Optional<TsofimDetails> optionalTsofimDetails = tsofimDetailsRepo.findByUuidChildAndDeleted(
-                uuid, false);
+                uuidChild, false);
         if (!optionalTsofimDetails.isPresent()) {
-            return ResponseMessages.CHILD + ResponseMessages.WITH_UUID + uuid + ResponseMessages.NOT_FOUND;
+            return ResponseMessages.CHILD + ResponseMessages.WITH_UUID + uuidChild + ResponseMessages.NOT_FOUND;
         }
         TsofimDetails tsofimDetails = optionalTsofimDetails.get();
 
@@ -72,16 +86,12 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
 //            ExpectedConditions.visibilityOf(button1).apply(webDriver);
 //        }); //here, wait time is 40 seconds
         wait.until(webDriver -> ExpectedConditions.visibilityOf(button1));
-
-
         driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/input[1]")).sendKeys(
                 childFirstNAme + " " + childSecondName
         );
-
         driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/input[1]")).sendKeys(
-                chikldTZ
+                childTZ
         );
-
         String place = tsofimDetails.getPlace().trim();
         WebElement choosePlace = driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[2]/div[4]"));
         choosePlace.click();

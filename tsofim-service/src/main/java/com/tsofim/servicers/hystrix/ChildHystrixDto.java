@@ -1,4 +1,5 @@
-package com.children.dto;
+package com.tsofim.servicers.hystrix;
+
 
 import lombok.*;
 
@@ -7,8 +8,8 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@EqualsAndHashCode
-public class ResponseChildDto {
+public class ChildHystrixDto {
+
     String uuidChild;
     String firstName;
     String secondName;
@@ -16,4 +17,6 @@ public class ResponseChildDto {
     String uuidParent;
     String uuidRespPers;
     String childTz;
+
 }
+

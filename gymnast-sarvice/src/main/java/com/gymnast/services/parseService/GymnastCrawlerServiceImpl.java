@@ -28,6 +28,9 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
 
     @Override
     public String sendFormToGymnast(String uuidChild) {
+// TODO: 29/10/2020
+//        get child name + child second name
+//        get parent name + parent second name
 
         LocalDate start = LocalDate.now();
         WebDriver driver = getWebDriver();
