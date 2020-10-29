@@ -1,12 +1,20 @@
 package com.school.services.parser;
 
 import com.school.dto.EmailDto;
+import com.school.dto.Response;
 import com.school.entity.SchoolDetails;
 import com.school.enums.ResponseMessages;
 import com.school.repository.SchoolDetailsRepo;
 import com.school.security.AES;
+import com.school.services.hystrix.child.ChildHystrixDto;
+import com.school.services.hystrix.child.ChildServiceClient;
+import com.school.services.hystrix.user.parent.UserHystrixDto;
+import com.school.services.hystrix.user.parent.UserServiceClient;
+import com.school.services.hystrix.user.respPerson.RespPersonHystrixDto;
+import com.school.services.hystrix.user.respPerson.RespPersonServiceClient;
 import com.school.services.rabbit.RabbitService;
 import org.apache.commons.io.FileUtils;
+import org.modelmapper.ModelMapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,6 +38,8 @@ import java.util.concurrent.TimeUnit;
 public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SchoolCrawlerServiceImpl.class);
+    ModelMapper modelMapper = new ModelMapper();
+    LocalDate start = LocalDate.now();
 
     @Value("${url.school}")
     private String schoolUrl;
@@ -44,18 +54,56 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
     SchoolDetailsRepo schoolDetailsRepo;
 
     @Autowired
+    ChildServiceClient childHystrix;
+    @Autowired
+    UserServiceClient userHystrix;
+    @Autowired
+    RespPersonServiceClient respPersonHystrix;
+
+    @Autowired
     RabbitService rabbitService;
 
-    LocalDate start = LocalDate.now();
+
     @Override
     public String sendFormToSchool(String uuidChild) {
-//        LocalDate start = LocalDate.now();/
-        String uuid = uuidChild;
+
+        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild);
+        ChildHystrixDto child = modelMapper.map(childFromHystrix.getContent(), ChildHystrixDto.class);
+        String childFirstNAme = child.getFirstName();
+        String childSecondName = child.getSecondName();
+        String childParentUuid = child.getUuidParent();
+        String respPersonUuid = child.getUuidRespPers();
+        RespPersonHystrixDto respPerson = new RespPersonHystrixDto();
+        UserHystrixDto parent = new UserHystrixDto();
+        String parentFirstName;
+        String parentSecondName;
+        String parentTZ;
+        String email;
+        if (respPersonUuid != null) {
+            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid);
+            respPerson = modelMapper.map(respPersonFromHystrix.getContent(), RespPersonHystrixDto.class);
+            parentFirstName = respPerson.getFirstName();
+            parentSecondName = respPerson.getSecondName();
+            parentTZ = respPerson.getTzRespPers();
+            email = respPerson.getEmailRespPerson();
+        } else {
+            userHystrix.getUserByUserUuid(childParentUuid);
+            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid);
+            parent = modelMapper.map(parentFromHystrix.getContent(), UserHystrixDto.class);
+            parentFirstName = parent.getFirstName();
+            parentSecondName = parent.getSecondName();
+            parentTZ = parent.getTz();
+            if(parent.getAltEmail() == null){
+                email=parent.getMainEmail();
+            }else{
+                email=parent.getAltEmail();
+            }
+        }
 
         Optional<SchoolDetails> optionalSchoolDetails = schoolDetailsRepo.findByUuidChildAndDeleted(
-                uuid, false);
+                uuidChild, false);
         if (!optionalSchoolDetails.isPresent()) {
-            return ResponseMessages.CHILD + ResponseMessages.WITH_UUID + uuid + ResponseMessages.NOT_FOUND;
+            return ResponseMessages.CHILD + ResponseMessages.WITH_UUID + uuidChild + ResponseMessages.NOT_FOUND;
         }
         SchoolDetails schoolDetails = optionalSchoolDetails.get();
         WebDriver driver = getWebDriver();
@@ -95,11 +143,11 @@ public class SchoolCrawlerServiceImpl implements SchoolCrawlerService {
         LOGGER.info(start + ": -> " + "parse school page with url: " + schoolUrl);
         String file = fileToBase64();
         EmailDto emailDto = EmailDto.builder()
-                .email("")
-                .childFirstName("")
-                .childSecondName("")
-                .firstName("")
-                .lastName("")
+                .email(email)
+                .childFirstName(childFirstNAme)
+                .childSecondName(childSecondName)
+                .firstName(parentFirstName)
+                .lastName(parentSecondName)
                 .picture(file)
                 .service(service)
                 .build();
