@@ -1,10 +1,20 @@
 package com.gymnast.services.parseService;
 
 import com.gymnast.dto.EmailDto;
+import com.gymnast.dto.Response;
+import com.gymnast.services.hystrix.child.ChildHystrixDto;
+import com.gymnast.services.hystrix.child.ChildServiceClient;
+import com.gymnast.services.hystrix.user.parent.UserHystrixDto;
+import com.gymnast.services.hystrix.user.parent.UserServiceClient;
+import com.gymnast.services.hystrix.user.respPerson.RespPersonHystrixDto;
+import com.gymnast.services.hystrix.user.respPerson.RespPersonServiceClient;
 import com.gymnast.services.rabbitService.RabbitService;
 import org.apache.commons.io.FileUtils;
+import org.modelmapper.ModelMapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -24,22 +34,62 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
     private String service;
 
     @Autowired
+    ChildServiceClient childHystrix;
+    @Autowired
+    UserServiceClient userHystrix;
+    @Autowired
+    RespPersonServiceClient respPersonHystrix;
+
+    @Autowired
     RabbitService rabbitService;
 
+    ModelMapper modelMapper = new ModelMapper();
+    private static final Logger LOGGER = LoggerFactory.getLogger(GymnastCrawlerServiceImpl.class);
+    LocalDate start = LocalDate.now();
     @Override
     public String sendFormToGymnast(String uuidChild) {
-// TODO: 29/10/2020
-//        get child name + child second name
-//        get parent name + parent second name
 
-        LocalDate start = LocalDate.now();
+        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild);
+        ChildHystrixDto child = modelMapper.map(childFromHystrix.getContent(), ChildHystrixDto.class);
+        String childFirstNAme = child.getFirstName();
+        String childSecondName = child.getSecondName();
+        String childTZ = child.getTz();
+        String childParentUuid = child.getUuidParent();
+        String respPersonUuid = child.getUuidRespPers();
+        RespPersonHystrixDto respPerson = new RespPersonHystrixDto();
+        UserHystrixDto parent = new UserHystrixDto();
+        String parentFirstName;
+        String parentSecondName;
+        String parentTZ;
+        String email;
+        if (respPersonUuid != null) {
+            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid);
+            respPerson = modelMapper.map(respPersonFromHystrix.getContent(), RespPersonHystrixDto.class);
+            parentFirstName = respPerson.getFirstName();
+            parentSecondName = respPerson.getSecondName();
+            parentTZ = respPerson.getTzRespPers();
+            email = respPerson.getEmailRespPerson();
+        } else {
+            userHystrix.getUserByUserUuid(childParentUuid);
+            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid);
+            parent = modelMapper.map(parentFromHystrix.getContent(), UserHystrixDto.class);
+            parentFirstName = parent.getFirstName();
+            parentSecondName = parent.getSecondName();
+            parentTZ = parent.getTz();
+            if(parent.getAltEmail() == null){
+                email=parent.getMainEmail();
+            }else{
+                email=parent.getAltEmail();
+            }
+        }
+
         WebDriver driver = getWebDriver();
         WebElement childName = driver.findElement(By.xpath("//body/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"));
-        childName.sendKeys("Ivan Ivanov");
+        childName.sendKeys(childFirstNAme + " " + childSecondName);
         WebElement tzChild = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"));
-        tzChild.sendKeys("111111111");
+        tzChild.sendKeys(childTZ);
         WebElement parentName = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"));
-        parentName.sendKeys("Natalya Ivanova");
+        parentName.sendKeys(parentFirstName +  " " + parentSecondName);
 //       first check
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/label[1]/div[1]/div[1]/div[2]")).click();
 //       second check
@@ -58,11 +108,11 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
         driver.quit();
         String file = fileToBase64();
         EmailDto emailDto = EmailDto.builder()
-                .email("")
-                .childFirstName("")
-                .childSecondName("")
-                .firstName("")
-                .lastName("")
+                .email(email)
+                .childFirstName(childFirstNAme)
+                .childSecondName(childSecondName)
+                .firstName(parentFirstName)
+                .lastName(parentSecondName)
                 .service(service)
                 .picture(file)
                 .build();
