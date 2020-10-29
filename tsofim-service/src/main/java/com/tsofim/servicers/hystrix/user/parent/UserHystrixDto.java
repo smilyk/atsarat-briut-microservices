@@ -1,4 +1,5 @@
-package com.users.dto;
+package com.tsofim.servicers.hystrix.user.parent;
+
 
 import lombok.*;
 
@@ -7,12 +8,14 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@EqualsAndHashCode
-public class UserResponseDto {
+public class UserHystrixDto {
+
     String uuidUser;
     String mainEmail;
     String firstName;
     String secondName;
     String altEmail;
     String tz;
+
 }
+

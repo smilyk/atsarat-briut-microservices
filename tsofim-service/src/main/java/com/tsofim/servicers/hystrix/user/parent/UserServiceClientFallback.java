@@ -1,4 +1,4 @@
-package com.tsofim.servicers.hystrix;
+package com.tsofim.servicers.hystrix.user.parent;
 
 
 import com.tsofim.dto.Response;
@@ -6,13 +6,13 @@ import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class ChildrenServiceClientFallback implements ChildServiceClient {
+class UserServiceClientFallback implements UserServiceClient {
 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	private final Throwable cause;
 
-	public ChildrenServiceClientFallback(Throwable cause) {
+	public UserServiceClientFallback(Throwable cause) {
 		this.cause = cause;
 	}
 
@@ -31,7 +31,7 @@ class ChildrenServiceClientFallback implements ChildServiceClient {
 //	}
 
 	@Override
-	public Response getChildByChildUuid(String uuidChild) {
+	public Response getUserByUserUuid(String uuidChild) {
 		if (cause instanceof FeignException && ((FeignException) cause).status() == 404) {
 			logger.error("404 error took place when getAllChildren was called with childUuid: " + uuidChild + ". Error message: "
 					+ cause.getLocalizedMessage());

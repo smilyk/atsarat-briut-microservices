@@ -1,4 +1,5 @@
-package com.tsofim.servicers.hystrix;
+package com.tsofim.servicers.hystrix.child;
+
 
 
 import feign.hystrix.FallbackFactory;

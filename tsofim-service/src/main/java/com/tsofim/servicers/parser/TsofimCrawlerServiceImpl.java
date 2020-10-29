@@ -5,8 +5,12 @@ import com.tsofim.dto.Response;
 import com.tsofim.entity.TsofimDetails;
 import com.tsofim.enums.ResponseMessages;
 import com.tsofim.repository.TsofimDetailsRepo;
-import com.tsofim.servicers.hystrix.ChildHystrixDto;
-import com.tsofim.servicers.hystrix.ChildServiceClient;
+import com.tsofim.servicers.hystrix.child.ChildHystrixDto;
+import com.tsofim.servicers.hystrix.child.ChildServiceClient;
+import com.tsofim.servicers.hystrix.user.parent.UserHystrixDto;
+import com.tsofim.servicers.hystrix.user.parent.UserServiceClient;
+import com.tsofim.servicers.hystrix.user.respPerson.RespPersonHystrixDto;
+import com.tsofim.servicers.hystrix.user.respPerson.RespPersonServiceClient;
 import com.tsofim.servicers.rabbitService.RabbitService;
 import org.apache.commons.io.FileUtils;
 import org.modelmapper.ModelMapper;
@@ -41,33 +45,56 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
     @Value("${service}")
     private String service;
     @Autowired
-    ChildServiceClient childServiceClient;
+    ChildServiceClient childHystrix;
+    @Autowired
+    UserServiceClient userHystrix;
+    @Autowired
+    RespPersonServiceClient respPersonHystrix;
 
     @Autowired
     TsofimDetailsRepo tsofimDetailsRepo;
     @Autowired
     RabbitService rabbitService;
+
     LocalDate start = LocalDate.now();
     private static final Logger LOGGER = LoggerFactory.getLogger(TsofimCrawlerServiceImpl.class);
     ModelMapper modelMapper = new ModelMapper();
 
     @Override
     public String sendFormToTsofim(String uuidChild) {
-        Response childHystrix = childServiceClient.getChildByChildUuid(uuidChild);
-        ChildHystrixDto child = modelMapper.map(childHystrix.getContent(), ChildHystrixDto.class);
+        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild);
+        ChildHystrixDto child = modelMapper.map(childFromHystrix.getContent(), ChildHystrixDto.class);
         String childFirstNAme = child.getFirstName();
         String childSecondName = child.getSecondName();
-        String childTZ = child.getChildTz();
+        String childTZ = child.getTz();
         String childParentUuid = child.getUuidParent();
-        String respPerson = child.getUuidRespPers();
-        String parentUuid = childParentUuid;
-        if (respPerson != null) {
-            parentUuid = respPerson;
+        String respPersonUuid = child.getUuidRespPers();
+        RespPersonHystrixDto respPerson = new RespPersonHystrixDto();
+        UserHystrixDto parent = new UserHystrixDto();
+        String parentFirstName;
+        String parentSecondName;
+        String parentTZ;
+        String email;
+        if (respPersonUuid != null) {
+            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid);
+            respPerson = modelMapper.map(respPersonFromHystrix.getContent(), RespPersonHystrixDto.class);
+            parentFirstName = respPerson.getFirstName();
+            parentSecondName = respPerson.getSecondName();
+            parentTZ = respPerson.getTzRespPers();
+            email = respPerson.getEmailRespPerson();
+        } else {
+            userHystrix.getUserByUserUuid(childParentUuid);
+            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid);
+            parent = modelMapper.map(parentFromHystrix.getContent(), UserHystrixDto.class);
+            parentFirstName = parent.getFirstName();
+            parentSecondName = parent.getSecondName();
+            parentTZ = parent.getTz();
+            if(parent.getAltEmail() == null){
+                email=parent.getMainEmail();
+            }else{
+                email=parent.getAltEmail();
+            }
         }
-
-        String parentFirstName = "787878";
-        String parentSecondNAme = "90909";
-        String parentTZ = "333333333";
 
         Optional<TsofimDetails> optionalTsofimDetails = tsofimDetailsRepo.findByUuidChildAndDeleted(
                 uuidChild, false);
@@ -135,7 +162,7 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[5]/input[1]")).click();
 
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/input[1]")).sendKeys(
-                parentFirstName + " " + parentSecondNAme);
+                parentFirstName + " " + parentSecondName);
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[2]/input[1]")).sendKeys(
                 parentTZ
         );
@@ -154,15 +181,16 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
         LOGGER.info(start + ": -> " + "parse tsofim page with url: " + tsofimUrl);
         String file = fileToBase64();
         EmailDto emailDto = EmailDto.builder()
-                .email("smilyk1982@gmail.com")
-                .childFirstName("FIRSTNAME")
-                .childSecondName("SECINDNAME")
-                .firstName("FATHERNAME")
-                .lastName("FATHERSECONDNAME")
+                .email(email)
+                .childFirstName(childFirstNAme)
+                .childSecondName(childSecondName)
+                .firstName(parentFirstName)
+                .lastName(parentSecondName)
                 .picture(file)
                 .service(service)
                 .build();
         rabbitService.sendToEmailService(emailDto);
+        LOGGER.info("E-mail send to " + email + " { " + emailDto + " }");
         return fileToBase64();
     }
 

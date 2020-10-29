@@ -15,5 +15,5 @@ public class ResponseChildDto {
     //    TODO to code
     String uuidParent;
     String uuidRespPers;
-    String childTz;
+    String tz;
 }

@@ -1,4 +1,4 @@
-package com.tsofim.servicers.hystrix;
+package com.tsofim.servicers.hystrix.user.parent;
 
 
 import com.tsofim.dto.Response;
@@ -11,37 +11,37 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "children-service", fallbackFactory = ChildFallbackFactory.class)
-public interface ChildServiceClient {
-    @GetMapping("/child/v1/{uuidChild}")
+@FeignClient(name = "user-service", fallbackFactory = UserFallbackFactory.class)
+public interface UserServiceClient {
+    @GetMapping("/users/v1/{uuidUser}")
 //    @Headers("Authorization: {token}")
-    public Response getChildByChildUuid(@PathVariable String uuidChild
+    public Response getUserByUserUuid(@PathVariable String uuidUser
 //                                               @RequestHeader("Authorization") String token);
     );
     @Component
-    class CurrencyFallbackFactory implements FallbackFactory<ChildServiceClient> {
+    class UserFallbackFactory implements FallbackFactory<UserServiceClient> {
         @Override
-        public ChildServiceClient create(Throwable cause) {
-            return new ChildrenServiceClientFallback(cause);
+        public UserServiceClient create(Throwable cause) {
+            return new UserServiceClientFallback(cause);
         }
     }
 
-    class ChildrenServiceClientFallback implements ChildServiceClient {
+    class UserServiceClientFallback implements UserServiceClient {
 
         Logger logger = LoggerFactory.getLogger(this.getClass());
 
         private final Throwable cause;
 
-        public ChildrenServiceClientFallback(Throwable cause) {
+        public UserServiceClientFallback(Throwable cause) {
             this.cause = cause;
         }
 
         @Override
-        public Response getChildByChildUuid(String childUuid
+        public Response getUserByUserUuid(String uuidUser
 //                                                   String req) {
         ){
             if (cause instanceof FeignException && ((FeignException) cause).status() == 404) {
-                logger.error("404 error took place when getChildByChildUuid was called with userId: " + childUuid + ". Error message: "
+                logger.error("404 error took place when getUserByUserUuid was called with userId: " + uuidUser + ". Error message: "
                         + cause.getLocalizedMessage());
             } else {
                 logger.error("Other error took place: " + cause.getLocalizedMessage());

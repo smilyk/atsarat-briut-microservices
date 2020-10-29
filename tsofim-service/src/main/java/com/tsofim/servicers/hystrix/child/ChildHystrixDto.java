@@ -1,4 +1,4 @@
-package com.tsofim.servicers.hystrix;
+package com.tsofim.servicers.hystrix.child;
 
 
 import lombok.*;
@@ -16,7 +16,7 @@ public class ChildHystrixDto {
     //    TODO to code
     String uuidParent;
     String uuidRespPers;
-    String childTz;
+    String tz;
 
 }
 
