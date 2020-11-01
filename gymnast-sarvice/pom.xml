@@ -20,11 +20,13 @@
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
+        <!--		end of selenium-->
+<!--        hystrix-dashboard-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
         </dependency>
-        <!--		end of selenium-->
+        <!--    end of hystrix-dashboard-->
         <!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-dashboard -->
 
 

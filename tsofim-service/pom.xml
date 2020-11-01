@@ -30,6 +30,11 @@
             <version>3.141.59</version>
         </dependency>
         <!--		end of selenium-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <!--    end of hystrix-dashboard-->
 
     </dependencies>
 </project>
