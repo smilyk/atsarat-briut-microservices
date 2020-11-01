@@ -13,8 +13,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableCircuitBreaker
 @EnableFeignClients
 @EnableHystrix
+@EnableHystrixDashboard
 public class GymnastServerApplication {
-
 
 	public static void main(String[] args)
 	{
