@@ -1,0 +1,551 @@
+2020-11-11 13:27:41.084  INFO MacBook-Pro --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.1.5.Final
+2020-11-11 13:27:47.302  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:27:55.312  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:27:55.323  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/eureka-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-11 13:27:55.850  INFO MacBook-Pro --- [           main] c.e.EurekaServiceApplication             : No active profile set, falling back to default profiles: default
+2020-11-11 13:27:59.296  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-11-11 13:28:03.459  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-11-11 13:28:07.096  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-11 13:28:07.104  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-11 13:28:07.243  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 0 JDBC repository interfaces.
+2020-11-11 13:28:07.358  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-11 13:28:07.540  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-11 13:28:07.656  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 0 JPA repository interfaces.
+2020-11-11 13:28:08.032  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-11-11 13:28:08.893  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-11 13:28:12.136  INFO MacBook-Pro --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=b41476dc-b8bd-3441-8d2b-3835cf163c25
+2020-11-11 13:28:12.543  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-11-11 13:28:12.603  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-11-11 13:28:12.675  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-11-11 13:28:17.063  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-11 13:28:17.108  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-11 13:28:17.665  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-11 13:28:23.658  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8761 (http)
+2020-11-11 13:28:23.751  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8761"]
+2020-11-11 13:28:23.779  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-11-11 13:28:23.780  INFO MacBook-Pro --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-11 13:28:25.691  INFO MacBook-Pro --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-11-11 13:28:25.692  INFO MacBook-Pro --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 29649 ms
+2020-11-11 13:28:27.777  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-11 13:28:27.778  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-11 13:28:27.917  INFO MacBook-Pro --- [           main] c.n.c.DynamicPropertyFactory             : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@66e218d8
+2020-11-11 13:28:40.665  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.ServletEndpointRegistrar     : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-11-11 13:28:41.923  INFO MacBook-Pro --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2020-11-11 13:28:42.843  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON encoding codec LegacyJacksonJson
+2020-11-11 13:28:42.845  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON decoding codec LegacyJacksonJson
+2020-11-11 13:28:45.450  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML encoding codec XStreamXml
+2020-11-11 13:28:45.451  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML decoding codec XStreamXml
+2020-11-11 13:28:55.274  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-11 13:28:56.324  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-11 13:28:56.945  INFO MacBook-Pro --- [         task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-11 13:28:57.240  WARN MacBook-Pro --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2020-11-11 13:28:57.257  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-11 13:28:57.258  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-11 13:28:57.537  INFO MacBook-Pro --- [         task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-11 13:28:58.757  WARN MacBook-Pro --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-11 13:29:00.291  INFO MacBook-Pro --- [         task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-11 13:29:02.273  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-11-11 13:29:06.730  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-11-11 13:29:07.127  INFO MacBook-Pro --- [         task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-11 13:29:08.261  INFO MacBook-Pro --- [           main] onConfiguration$FunctionBindingRegistrar : Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-11-11 13:29:09.782  INFO MacBook-Pro --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-11 13:29:09.833  INFO MacBook-Pro --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-11 13:29:15.651  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-11-11 13:29:22.142  WARN MacBook-Pro --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-11 13:29:23.983  INFO MacBook-Pro --- [           main] o.s.c.n.e.InstanceInfoFactory            : Setting initial instance status as: STARTING
+2020-11-11 13:29:24.437  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Initializing Eureka in region us-east-1
+2020-11-11 13:29:24.722  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON encoding codec LegacyJacksonJson
+2020-11-11 13:29:24.722  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON decoding codec LegacyJacksonJson
+2020-11-11 13:29:24.722  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML encoding codec XStreamXml
+2020-11-11 13:29:24.723  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML decoding codec XStreamXml
+2020-11-11 13:29:25.690  INFO MacBook-Pro --- [           main] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:29:25.966  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-11 13:29:25.967  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-11 13:29:25.967  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-11 13:29:25.967  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-11 13:29:25.968  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-11 13:29:25.968  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application version is -1: true
+2020-11-11 13:29:25.968  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-11 13:29:26.627 ERROR MacBook-Pro --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:196)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:167)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1074)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:988)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:433)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:275)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:363)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192)
+	at com.sun.proxy.$Proxy177.getApplications(Unknown Source)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration.peerAwareInstanceRegistry(EurekaServerAutoConfiguration.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.eureka.EurekaServiceApplication.main(EurekaServiceApplication.java:12)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 101 more
+2020-11-11 13:29:26.634  WARN MacBook-Pro --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+2020-11-11 13:29:26.635 ERROR MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : DiscoveryClient_UNKNOWN/${spring.application.name}:2ec615a052217da73ef81363ec2a2e83 - was unable to refresh its cache! status = Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1074)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:988)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:433)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:275)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:67)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:363)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:186)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:360)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192)
+	at com.sun.proxy.$Proxy177.getApplications(Unknown Source)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerAutoConfiguration.peerAwareInstanceRegistry(EurekaServerAutoConfiguration.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.eureka.EurekaServiceApplication.main(EurekaServiceApplication.java:12)
+2020-11-11 13:29:26.682  WARN MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Using default backup registry implementation which does not do anything.
+2020-11-11 13:29:26.690  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Not registering with Eureka server per configuration
+2020-11-11 13:29:26.699  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Discovery Client initialized at timestamp 1605094166696 with initial instances count: 0
+2020-11-11 13:29:27.415  INFO MacBook-Pro --- [           main] c.n.e.DefaultEurekaServerContext         : Initializing ...
+2020-11-11 13:29:27.417  INFO MacBook-Pro --- [           main] c.n.e.c.PeerEurekaNodes                  : Adding new peer nodes [http://localhost:8761/eureka/]
+2020-11-11 13:29:27.442  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON encoding codec LegacyJacksonJson
+2020-11-11 13:29:27.442  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON decoding codec LegacyJacksonJson
+2020-11-11 13:29:27.443  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML encoding codec XStreamXml
+2020-11-11 13:29:27.443  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML decoding codec XStreamXml
+2020-11-11 13:29:28.225  INFO MacBook-Pro --- [           main] c.n.e.c.PeerEurekaNodes                  : Replica node URL:  http://localhost:8761/eureka/
+2020-11-11 13:29:28.297  INFO MacBook-Pro --- [           main] c.n.e.r.AbstractInstanceRegistry         : Finished initializing remote region registries. All known remote regions: []
+2020-11-11 13:29:28.299  INFO MacBook-Pro --- [           main] c.n.e.DefaultEurekaServerContext         : Initialized
+2020-11-11 13:29:30.032  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 24 endpoint(s) beneath base path '/actuator'
+2020-11-11 13:29:31.898  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2020-11-11 13:29:32.193  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-11 13:29:32.195  INFO MacBook-Pro --- [           main] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-11-11 13:29:32.196  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : started bean '_org.springframework.integration.errorLogger'
+2020-11-11 13:29:33.179  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:29:35.263  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:29:35.266  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/eureka-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-11 13:29:36.975  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-11 13:29:37.008  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-11 13:29:37.149 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-11 13:29:38.814  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-11-11 13:29:39.597  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#13ebbdab:0/SimpleConnection@49038769 [delegate=amqp://user@127.0.0.1:5672/, localPort= 55574]
+2020-11-11 13:29:40.146  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusOutput' has 1 subscriber(s).
+2020-11-11 13:29:40.276  INFO MacBook-Pro --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2020-11-11 13:29:40.289  INFO MacBook-Pro --- [      Thread-18] o.s.c.n.e.s.EurekaServerBootstrap        : Setting the eureka configuration..
+2020-11-11 13:29:40.292  INFO MacBook-Pro --- [      Thread-18] o.s.c.n.e.s.EurekaServerBootstrap        : Eureka data center value eureka.datacenter is not set, defaulting to default
+2020-11-11 13:29:40.294  INFO MacBook-Pro --- [      Thread-18] o.s.c.n.e.s.EurekaServerBootstrap        : Eureka environment value eureka.environment is not set, defaulting to test
+2020-11-11 13:29:40.336  INFO MacBook-Pro --- [      Thread-18] o.s.c.n.e.s.EurekaServerBootstrap        : isAws returned false
+2020-11-11 13:29:40.337  INFO MacBook-Pro --- [      Thread-18] o.s.c.n.e.s.EurekaServerBootstrap        : Initialized server context
+2020-11-11 13:29:40.338  INFO MacBook-Pro --- [      Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2020-11-11 13:29:40.338  INFO MacBook-Pro --- [      Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2020-11-11 13:29:40.338  INFO MacBook-Pro --- [      Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2020-11-11 13:29:40.584  INFO MacBook-Pro --- [      Thread-18] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2020-11-11 13:29:41.152  INFO MacBook-Pro --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA, bound to: springCloudBus
+2020-11-11 13:29:41.518  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA.errors' has 1 subscriber(s).
+2020-11-11 13:29:41.520  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA.errors' has 2 subscriber(s).
+2020-11-11 13:29:41.657  INFO MacBook-Pro --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA'
+2020-11-11 13:29:41.663  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8761"]
+2020-11-11 13:29:41.772  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8761 (http) with context path ''
+2020-11-11 13:29:41.775  INFO MacBook-Pro --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2020-11-11 13:29:41.812  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-11 13:29:41.816  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-11 13:29:42.561  INFO MacBook-Pro --- [nio-8761-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-11 13:29:42.564  INFO MacBook-Pro --- [nio-8761-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2020-11-11 13:29:42.716  INFO MacBook-Pro --- [nio-8761-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 152 ms
+2020-11-11 13:29:43.045  WARN MacBook-Pro --- [nio-8761-exec-2] c.n.e.r.AbstractInstanceRegistry         : DS: Registry: lease doesn't exist, registering resource: CHILDREN-SERVICE - children-service:78cd3421fe10304cd2b752149c79a27c
+2020-11-11 13:29:43.046  WARN MacBook-Pro --- [nio-8761-exec-2] c.n.e.r.InstanceResource                 : Not Found (Renew): CHILDREN-SERVICE - children-service:78cd3421fe10304cd2b752149c79a27c
+2020-11-11 13:29:43.244  INFO MacBook-Pro --- [           main] c.e.EurekaServiceApplication             : Started EurekaServiceApplication in 127.742 seconds (JVM running for 139.408)
+2020-11-11 13:29:43.669  WARN MacBook-Pro --- [nio-8761-exec-5] c.n.e.r.AbstractInstanceRegistry         : DS: Registry: lease doesn't exist, registering resource: CONFIG-SERVER - config
+2020-11-11 13:29:43.671  WARN MacBook-Pro --- [nio-8761-exec-5] c.n.e.r.InstanceResource                 : Not Found (Renew): CONFIG-SERVER - config
+2020-11-11 13:29:43.859  INFO MacBook-Pro --- [nio-8761-exec-7] c.n.e.r.AbstractInstanceRegistry         : Registered instance CONFIG-SERVER/config with status UP (replication=false)
+2020-11-11 13:29:43.859  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance CONFIG-SERVER/config with status UP (replication=false)
+2020-11-11 13:29:43.874  INFO MacBook-Pro --- [nio-8761-exec-3] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c with status UP (replication=false)
+2020-11-11 13:29:44.724  INFO MacBook-Pro --- [io-8761-exec-10] c.n.e.r.AbstractInstanceRegistry         : Registered instance CONFIG-SERVER/config with status UP (replication=true)
+2020-11-11 13:29:44.726  INFO MacBook-Pro --- [io-8761-exec-10] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c with status UP (replication=true)
+2020-11-11 13:29:49.882  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:29:49.906  INFO MacBook-Pro --- [gistrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 3c208672881a
+2020-11-11 13:29:51.572  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:29:54.022  WARN MacBook-Pro --- [nio-8761-exec-6] c.n.e.r.AbstractInstanceRegistry         : DS: Registry: lease doesn't exist, registering resource: GYMNAST-SERVICE - gymnast-service:8ac999fa03930845d861014b3305e51d
+2020-11-11 13:29:54.022  WARN MacBook-Pro --- [nio-8761-exec-6] c.n.e.r.InstanceResource                 : Not Found (Renew): GYMNAST-SERVICE - gymnast-service:8ac999fa03930845d861014b3305e51d
+2020-11-11 13:29:54.097  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d with status UP (replication=false)
+2020-11-11 13:29:54.620  INFO MacBook-Pro --- [nio-8761-exec-7] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d with status UP (replication=true)
+2020-11-11 13:29:56.688  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-11 13:29:56.688  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-11 13:29:56.689  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-11 13:29:56.689  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-11 13:29:56.689  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-11 13:29:56.689  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application version is -1: true
+2020-11-11 13:29:56.689  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-11 13:29:56.706  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : The response status is 200
+2020-11-11 13:30:26.678  INFO MacBook-Pro --- [io-8761-exec-10] c.n.e.r.AbstractInstanceRegistry         : Registered instance ZUUL-SERVICE/zuul-service:1af6f817e9ee454d3b7ac1558e31dc11 with status UP (replication=false)
+2020-11-11 13:30:26.712  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-11 13:30:26.712  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-11 13:30:26.712  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-11 13:30:26.713  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-11 13:30:26.713  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-11 13:30:26.713  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application version is -1: false
+2020-11-11 13:30:26.713  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-11 13:30:26.728  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : The response status is 200
+2020-11-11 13:30:27.193  INFO MacBook-Pro --- [nio-8761-exec-1] c.n.e.r.AbstractInstanceRegistry         : Registered instance ZUUL-SERVICE/zuul-service:1af6f817e9ee454d3b7ac1558e31dc11 with status UP (replication=true)
+2020-11-11 13:30:40.420  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:30:57.957  INFO MacBook-Pro --- [nio-8761-exec-3] c.n.e.r.AbstractInstanceRegistry         : Registered instance USER-SERVICE/user-service:4ca90482fd421b28aea7e15526d61f4a with status UP (replication=false)
+2020-11-11 13:30:58.483  INFO MacBook-Pro --- [nio-8761-exec-2] c.n.e.r.AbstractInstanceRegistry         : Registered instance USER-SERVICE/user-service:4ca90482fd421b28aea7e15526d61f4a with status UP (replication=true)
+2020-11-11 13:31:25.699  WARN MacBook-Pro --- [Sender@fbdba1c}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-11-11 13:31:25.716  WARN MacBook-Pro --- [Sender@fbdba1c}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:292)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:754)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:689)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1610)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1515)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:64)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:770)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:740)
+	... 9 more
+2020-11-11 13:31:40.422  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 13:32:40.424  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 13:33:40.429  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 5ms
+2020-11-11 13:33:44.687  INFO MacBook-Pro --- [nio-8761-exec-3] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d with status DOWN (replication=false)
+2020-11-11 13:33:45.211  INFO MacBook-Pro --- [nio-8761-exec-6] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d with status DOWN (replication=true)
+2020-11-11 13:33:53.762  INFO MacBook-Pro --- [nio-8761-exec-2] c.n.e.r.AbstractInstanceRegistry         : Cancelled instance GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d (replication=false)
+2020-11-11 13:33:54.282  WARN MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : DS: Registry: cancel failed because Lease is not registered for: GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d
+2020-11-11 13:33:54.282  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.InstanceResource                 : Not Found (Cancel): GYMNAST-SERVICE - gymnast-service:8ac999fa03930845d861014b3305e51d
+2020-11-11 13:33:54.285  WARN MacBook-Pro --- [get_localhost-2] c.n.e.c.ReplicationTask                  : The replication of task GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d:Cancel@localhost failed with response code 404
+2020-11-11 13:33:54.286  WARN MacBook-Pro --- [get_localhost-2] c.n.e.c.PeerEurekaNode                   : GYMNAST-SERVICE/gymnast-service:8ac999fa03930845d861014b3305e51d:Cancel@localhost: missing entry.
+2020-11-11 13:34:25.979  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:34:40.398  INFO MacBook-Pro --- [io-8761-exec-10] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c with status DOWN (replication=false)
+2020-11-11 13:34:40.431  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 13:34:40.924  INFO MacBook-Pro --- [nio-8761-exec-5] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c with status DOWN (replication=true)
+2020-11-11 13:34:47.614  INFO MacBook-Pro --- [nio-8761-exec-8] c.n.e.r.AbstractInstanceRegistry         : Cancelled instance CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c (replication=false)
+2020-11-11 13:34:48.126  WARN MacBook-Pro --- [nio-8761-exec-1] c.n.e.r.AbstractInstanceRegistry         : DS: Registry: cancel failed because Lease is not registered for: CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c
+2020-11-11 13:34:48.127  INFO MacBook-Pro --- [nio-8761-exec-1] c.n.e.r.InstanceResource                 : Not Found (Cancel): CHILDREN-SERVICE - children-service:78cd3421fe10304cd2b752149c79a27c
+2020-11-11 13:34:48.130  WARN MacBook-Pro --- [get_localhost-2] c.n.e.c.ReplicationTask                  : The replication of task CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c:Cancel@localhost failed with response code 404
+2020-11-11 13:34:48.130  WARN MacBook-Pro --- [get_localhost-2] c.n.e.c.PeerEurekaNode                   : CHILDREN-SERVICE/children-service:78cd3421fe10304cd2b752149c79a27c:Cancel@localhost: missing entry.
+2020-11-11 13:35:08.671  INFO MacBook-Pro --- [io-8761-exec-10] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:35:10.138  INFO MacBook-Pro --- [io-8761-exec-10] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:35:40.447  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 15ms
+2020-11-11 13:36:36.048  INFO MacBook-Pro --- [nio-8761-exec-8] o.a.c.c.C.[.[.[/]                        : jolokia-actuator-endpoint: No access restrictor found, access to any MBean is allowed
+2020-11-11 13:36:40.449  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 13:36:44.736  INFO MacBook-Pro --- [nio-8761-exec-4] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:4cc73ec57710c6fac5fd196fd5df99d3 with status UP (replication=false)
+2020-11-11 13:36:45.248  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance GYMNAST-SERVICE/gymnast-service:4cc73ec57710c6fac5fd196fd5df99d3 with status UP (replication=true)
+2020-11-11 13:37:16.035  INFO MacBook-Pro --- [nio-8761-exec-4] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:ba37d9ba55b7b950ee265fcf7a9a58e3 with status UP (replication=false)
+2020-11-11 13:37:16.557  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:ba37d9ba55b7b950ee265fcf7a9a58e3 with status UP (replication=true)
+2020-11-11 13:37:40.450  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:38:40.454  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 13:39:25.993  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:39:40.458  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-11 13:40:08.671  INFO MacBook-Pro --- [nio-8761-exec-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:40:09.859  INFO MacBook-Pro --- [nio-8761-exec-1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:40:40.462  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 13:41:40.464  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 13:42:40.465  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:43:40.466  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:44:26.000  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:44:28.321  INFO MacBook-Pro --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2020-11-11 13:44:40.472  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 13:45:08.673  INFO MacBook-Pro --- [nio-8761-exec-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:45:09.931  INFO MacBook-Pro --- [nio-8761-exec-1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:45:40.476  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-11 13:46:40.476  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:47:40.478  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 13:48:40.479  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 13:49:26.009  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:49:40.484  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-11 13:50:28.921  INFO MacBook-Pro --- [io-8761-exec-10] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:50:30.909  INFO MacBook-Pro --- [io-8761-exec-10] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:50:40.491  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 6ms
+2020-11-11 13:51:40.491  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:52:40.495  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 13:53:40.502  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:54:26.013  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:54:40.504  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-11 13:55:40.503  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:55:48.639  INFO MacBook-Pro --- [nio-8761-exec-7] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 13:55:49.648  INFO MacBook-Pro --- [nio-8761-exec-7] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 13:56:40.504  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 13:57:40.505  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:58:40.507  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 13:59:26.024  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 13:59:28.307  INFO MacBook-Pro --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2020-11-11 13:59:40.509  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 14:00:40.516  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 6ms
+2020-11-11 14:01:08.646  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 14:01:09.855  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 14:01:40.517  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 14:02:40.524  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 7ms
+2020-11-11 14:03:40.527  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 14:04:26.034  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 14:04:40.533  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 6ms
+2020-11-11 14:05:40.539  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 5ms
+2020-11-11 14:06:09.712  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 14:06:11.692  INFO MacBook-Pro --- [nio-8761-exec-2] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 14:06:40.709  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 6ms
+2020-11-11 14:07:40.716  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 14:08:40.718  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-11 14:09:26.208  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-11 14:09:40.722  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-11 14:10:40.724  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-11 14:11:28.914  INFO MacBook-Pro --- [nio-8761-exec-5] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-11 14:11:31.250  INFO MacBook-Pro --- [nio-8761-exec-5] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=eureka-service, profiles=[default], label=main, version=743c1175cb82ef2145f6379f410b63ae47a0e18b, state=null
+2020-11-11 14:11:40.727  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-11 14:12:40.728  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-11 14:13:10.021  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance CONFIG-SERVER/config with status DOWN (replication=false)
+2020-11-11 14:13:10.069  INFO MacBook-Pro --- [extShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2020-11-11 14:13:10.281  INFO MacBook-Pro --- [nio-8761-exec-8] c.n.e.r.AbstractInstanceRegistry         : Registered instance ZUUL-SERVICE/zuul-service:1af6f817e9ee454d3b7ac1558e31dc11 with status DOWN (replication=false)
+2020-11-11 14:13:10.546 ERROR MacBook-Pro --- [et_localhost-15] c.n.e.c.ReplicationTaskProcessor         : Network level connection to peer localhost; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 10 more
+2020-11-11 14:13:11.492  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-11-11 14:13:11.866  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-11-11 14:13:11.867  INFO MacBook-Pro --- [extShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA'
+2020-11-11 14:13:11.970  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA.errors' has 1 subscriber(s).
+2020-11-11 14:13:11.980  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.ggT4G4pnQNCJqlDA2SFIBA.errors' has 0 subscriber(s).
+2020-11-11 14:13:12.268  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-11 14:13:12.277  INFO MacBook-Pro --- [extShutdownHook] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2020-11-11 14:13:12.304  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : stopped bean '_org.springframework.integration.errorLogger'
+2020-11-11 14:13:12.362  INFO MacBook-Pro --- [extShutdownHook] c.n.e.DefaultEurekaServerContext         : Shutting down ...
+2020-11-11 14:13:12.442  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2020-11-11 14:13:12.522  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2020-11-11 14:13:12.529  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2020-11-11 14:13:12.541  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2020-11-11 14:13:13.084  INFO MacBook-Pro --- [extShutdownHook] c.n.e.DefaultEurekaServerContext         : Shut down
+2020-11-11 14:13:13.265  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-11-11 14:13:13.356  INFO MacBook-Pro --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-11 14:13:13.881  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-11-11 14:13:13.882  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-11 14:13:13.888  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2020-11-11 14:13:14.165  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2020-11-11 14:13:14.583  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Shutting down DiscoveryClient ...
+2020-11-11 14:13:14.790  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Completed shut down of DiscoveryClient

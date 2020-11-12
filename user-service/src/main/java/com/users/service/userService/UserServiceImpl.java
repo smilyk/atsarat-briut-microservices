@@ -16,6 +16,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -185,4 +187,11 @@ public class UserServiceImpl implements UserService {
         return rez;
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        Optional<Users> optionalUser = userRepo.findByMainEmail(email);
+        if(!optionalUser.isPresent())
+            throw new UsernameNotFoundException(email);
+        return new User(optionalUser.get().getMainEmail(), optionalUser.get().getPassword(), new ArrayList<>());
+    }
 }

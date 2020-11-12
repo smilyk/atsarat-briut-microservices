@@ -25,7 +25,7 @@ public class UserUtils {
                 .setSubject(userId)
 //                time of email verification = 864000000; // 10 days
                 .setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS512, SecurityConstants.getTokenSecret())
+                .signWith(SignatureAlgorithm.HS512, SecurityConstants.TOKEN_SECRET)
                 .compact();
         return token;
     }
@@ -36,7 +36,7 @@ public class UserUtils {
     public boolean hasTokenExpired(String token) {
         boolean rez = false;
         try {
-            Claims claims = Jwts.parser().setSigningKey(SecurityConstants.getTokenSecret()).parseClaimsJws(token)
+            Claims claims = Jwts.parser().setSigningKey(SecurityConstants.TOKEN_SECRET).parseClaimsJws(token)
                     .getBody();
             Date tokenExpirationDate = claims.getExpiration();
             Date todayDate = new Date();
