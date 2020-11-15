@@ -1738,3 +1738,15 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2020-11-15 17:20:29.590  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
 2020-11-15 17:21:29.591  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
 2020-11-15 17:22:29.595  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-15 17:23:19.059  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:23:29.595  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:24:29.598  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-15 17:25:29.611  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 11ms
+2020-11-15 17:26:29.616  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 5ms
+2020-11-15 17:27:29.618  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:28:19.068  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:28:29.618  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:29:29.622  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-15 17:30:29.624  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-15 17:31:29.626  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-15 17:32:29.627  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms

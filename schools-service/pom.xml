@@ -29,5 +29,19 @@
             <artifactId>spring-cloud-netflix-hystrix-dashboard</artifactId>
         </dependency>
         <!--    end of hystrix-dashboard-->
+        <!--        security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!--        end of security-->
+        <!--        For create token-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+        <!--        end for create token-->
     </dependencies>
 </project>
+

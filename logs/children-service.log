@@ -233,3 +233,5 @@ java.lang.IllegalStateException: couldn't determine local port. Please set sprin
 2020-11-15 17:17:32.099 ERROR MacBook-Pro --- [nio-8092-exec-6] c.c.s.v.ValidatorServiceImpl             :  child  providedteudat zeut is exists in DB
 2020-11-15 17:20:34.656 ERROR MacBook-Pro --- [nio-8092-exec-7] c.c.s.v.ValidatorServiceImpl             :  child  providedteudat zeut is exists in DB
 2020-11-15 17:20:50.066  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:25:50.078  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:30:50.099  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration

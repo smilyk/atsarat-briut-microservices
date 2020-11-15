@@ -8761,3 +8761,5 @@ com.netflix.zuul.exception.ZuulException:
 2020-11-15 17:17:31.866  INFO MacBook-Pro --- [nio-8011-exec-9] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-11-15 17:17:32.784  INFO MacBook-Pro --- [erListUpdater-0] c.n.c.ChainedDynamicProperty             : Flipping property: children-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 2020-11-15 17:20:23.833  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:25:23.853  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:30:23.871  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
