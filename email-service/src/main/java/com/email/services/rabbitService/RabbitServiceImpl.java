@@ -23,6 +23,11 @@ public class RabbitServiceImpl implements RabbitService {
         emailService.sendRegistrationEmail(incomingMessage);
     }
 
+    @RabbitListener(queues = "${email.password.queue}")
+    public void recivedChangePasswordMessage(EmailVerificationDto incomingMessage) {
+        emailService.changePasswordEmail(incomingMessage);
+    }
+
     @RabbitListener(queues = "${email.queue}")
     public void receivedMessage(EmailDto incomingMessage) {
         Services service = incomingMessage.getService();

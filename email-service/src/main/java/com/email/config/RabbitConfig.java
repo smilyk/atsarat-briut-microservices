@@ -39,6 +39,10 @@ public class RabbitConfig {
     @Value(("${conf.email.key}"))
     String confEmailRoutingkey;
 
+    @Value(("${email.password.queue}"))
+    String changePasswordQueue;
+    @Value(("${email.password.key}"))
+    String changePasswordKey;
 
 
 
@@ -67,6 +71,21 @@ public class RabbitConfig {
             channel.queueDeclare(confEmailQueue, false, false, false, null);
             channel.exchangeDeclare(emailExchange, type, true);
             channel.queueBind(confEmailQueue, emailExchange, confEmailRoutingkey);
+        } catch (TimeoutException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Bean
+    public void crrateChangePasswordQueue() {
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setPassword(rabbitPassword);
+        factory.setUsername(rabbitUserName);
+        try (Connection connection = factory.newConnection();
+             Channel channel = connection.createChannel()) {
+            channel.queueDeclare(changePasswordQueue, false, false, false, null);
+            channel.exchangeDeclare(emailExchange, type, true);
+            channel.queueBind(changePasswordQueue, emailExchange, changePasswordKey);
         } catch (TimeoutException | IOException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,8 @@
 package com.users.controllers;
 
 import com.users.dto.*;
+import com.users.entity.resetPassword.PasswordResetModel;
+import com.users.entity.resetPassword.PasswordResetRequestModel;
 import com.users.enums.RequestOperationName;
 import com.users.enums.RequestOperationStatus;
 import com.users.service.userService.UserServiceImpl;
@@ -95,6 +97,43 @@ public class UserController {
 
         return new Response(returnValue, HttpServletResponse.SC_OK, currentDate);
     }
+    /**
+     * step-1 for change password
+     * http://localhost:8090/users/password-reset-request
+     */
+    @PostMapping(path = "/password-reset-request")
+    public OperationStatusModel requestReset(@RequestBody PasswordResetRequestModel passwordResetRequestModel) {
+        OperationStatusModel returnValue = new OperationStatusModel();
 
+        boolean operationResult = userService.requestPasswordReset(passwordResetRequestModel.getEmail());
+
+        returnValue.setOperationName(RequestOperationName.PASSWORD_RESET.name());
+        returnValue.setOperationResult(RequestOperationStatus.ERROR.name());
+
+        if (operationResult) {
+            returnValue.setOperationResult(RequestOperationStatus.SUCCESS.name());
+        }
+
+        return returnValue;
+    }
+
+    /**    step-2 for change password */
+    @PostMapping(path = "/password-reset")
+    public OperationStatusModel resetPassword(@RequestBody PasswordResetModel passwordResetModel) {
+        OperationStatusModel returnValue = new OperationStatusModel();
+
+        boolean operationResult = userService.resetPassword(
+                passwordResetModel.getToken(),
+                passwordResetModel.getPassword());
+
+        returnValue.setOperationName(RequestOperationName.PASSWORD_RESET.name());
+        returnValue.setOperationResult(RequestOperationStatus.ERROR.name());
+
+        if (operationResult) {
+            returnValue.setOperationResult(RequestOperationStatus.SUCCESS.name());
+        }
+
+        return returnValue;
+    }
 
 }

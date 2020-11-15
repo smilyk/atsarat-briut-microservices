@@ -2,8 +2,10 @@ package com.users.service.userService;
 
 import com.users.dto.*;
 import com.users.entity.Users;
+import com.users.entity.resetPassword.PasswordResetTokenEntity;
 import com.users.enums.ErrorMessages;
 import com.users.enums.LoggerMessages;
+import com.users.repository.PasswordResetTokenRepository;
 import com.users.repository.UserRepo;
 import com.users.utils.UserUtils;
 import org.modelmapper.ModelMapper;
@@ -41,6 +43,12 @@ public class UserServiceImpl implements UserService {
     @Value(("${email.key}"))
     String emailRoutingkey;
 
+    @Value(("${email.password.exchange}"))
+    String emailPasswordExchange;
+    @Value(("${email.password.key}"))
+    String emailPasswordRoutingkey;
+
+
     @Autowired
     UserRepo userRepo;
     @Autowired
@@ -49,6 +57,8 @@ public class UserServiceImpl implements UserService {
     BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private AmqpTemplate rabbitTemplate;
+    @Autowired
+    PasswordResetTokenRepository passwordResetTokenRepository;
 
     @Override
     public Response addUser(AddUserDto user) {
@@ -191,17 +201,76 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUser(String email) {
         Optional<Users> optionalUser = userRepo.findByMainEmail(email);
-        if(!optionalUser.isPresent())
+        if (!optionalUser.isPresent())
             throw new UsernameNotFoundException(email);
         UserDto returnValue = new UserDto();
         BeanUtils.copyProperties(optionalUser.get(), returnValue);
         return returnValue;
     }
 
+    /**
+     * запрос на обноелние пароля шаг1
+     */
+    @Override
+    public boolean requestPasswordReset(String email) {
+
+        Optional<Users> optionalUser = userRepo.findByMainEmail(email);
+
+        if (!optionalUser.isPresent()) {
+            return false;
+        }
+        Users userEntity = optionalUser.get();
+        String token = new UserUtils().generatePasswordResetToken(userEntity.getUuidUser());
+
+        PasswordResetTokenEntity passwordResetTokenEntity = new PasswordResetTokenEntity();
+        passwordResetTokenEntity.setToken(token);
+        passwordResetTokenEntity.setUserDetails(userEntity);
+        passwordResetTokenRepository.save(passwordResetTokenEntity);
+//        отправляем письмо. Если письмоотправлено - вернется True
+        EmailVerificationDto emailDto = EmailVerificationDto.builder()
+                .email(userEntity.getMainEmail())
+                .tokenValue(token)
+                .userLastName(userEntity.getSecondName())
+                .userName(userEntity.getFirstName())
+                .build();
+//        method - send email
+        rabbitTemplate.convertAndSend(emailPasswordExchange, emailPasswordRoutingkey, emailDto);
+        LOGGER.info("new token for changing password was send to email " + emailDto.getEmail());
+        return true;
+    }
+
+    /** запрос на обноелние пароля шаг2**/
+    @Override
+    public boolean resetPassword(String token, String password) {
+        boolean returnValue = false;
+
+        if( UserUtils.hasTokenExpired(token) )
+        {
+            return returnValue;
+        }
+        PasswordResetTokenEntity passwordResetTokenEntity = passwordResetTokenRepository.findByToken(token);
+        if (passwordResetTokenEntity == null) {
+            return returnValue;
+        }
+        // Prepare new password
+        String encodedPassword = bCryptPasswordEncoder.encode(password);
+        // Update User password in database
+        Users userEntity = passwordResetTokenEntity.getUserDetails();
+        userEntity.setPassword(encodedPassword);
+        Users savedUserEntity = userRepo.save(userEntity);
+        // Verify if password was saved successfully
+        if (savedUserEntity != null && savedUserEntity.getPassword().equalsIgnoreCase(encodedPassword)) {
+            returnValue = true;
+        }
+        // Remove Password Reset token from database
+        passwordResetTokenRepository.delete(passwordResetTokenEntity);
+        return returnValue;
+    }
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<Users> optionalUser = userRepo.findByMainEmail(email);
-        if(!optionalUser.isPresent())
+        if (!optionalUser.isPresent())
             throw new UsernameNotFoundException(email);
         /**
          * если optionalUser.get().getConfirmEmail(), == false -> login вернет error

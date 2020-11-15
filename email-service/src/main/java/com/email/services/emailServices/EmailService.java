@@ -16,5 +16,7 @@ public interface EmailService {
     String sendTsofimEmail(EmailDto mail);
 
     void emailError(String email, String service, String userFirstName, String userLastName);
+
+    String changePasswordEmail(EmailVerificationDto incomingMessage);
 }
 

@@ -19,6 +19,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.time.LocalDateTime;
 import java.util.Base64;
+
 @Service
 @RefreshScope
 public class EmailServiceImpl implements EmailService {
@@ -46,7 +47,9 @@ public class EmailServiceImpl implements EmailService {
         String tokenValue = mail.getTokenValue();
         String lastName = mail.getUserLastName();
         String firstName = mail.getUserName();
-
+        if (lastName == null) {
+            lastName = " ";
+        }
         String VERIFY_LINK = env.getProperty("verification.link");
         MimeMessageHelper helper = null;
         try {
@@ -74,7 +77,50 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error("verification email: something is wrong" + ex);
             emailError(adminEmail, VERIFICATION_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator"+ mail);
+            LOGGER.error("send error-email to administrator" + mail);
+            System.out.println(ex.getMessage());
+        }
+        return "Email send!";
+    }
+
+    @Override
+    public String changePasswordEmail(EmailVerificationDto mail) {
+        MimeMessage msg = emailSender.createMimeMessage();
+
+        String email = mail.getEmail();
+        String tokenValue = mail.getTokenValue();
+        String lastName = mail.getUserLastName();
+        String firstName = mail.getUserName();
+        if (lastName == null) {
+            lastName = " ";
+        }
+        String VERIFY_LINK = env.getProperty("change.password.verification.link");
+        MimeMessageHelper helper = null;
+        try {
+            helper = new MimeMessageHelper(msg, true);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        ////        The HTML body for the email.
+        final String htmlMsg =
+                "<h1> Hi " + firstName + " " + lastName + ". Please verify your email address</h1>"
+                        + "<p>For changing your password you click to link: "
+                        + " <a href='" + VERIFY_LINK + "?token=" + tokenValue + "'>" + "<br/><br/>" + " Change password" +
+                        "</a><br/><br/>"
+                        + "If you didn`t send responce for changing password - please ignore this message";
+        try {
+            helper.setTo(email);
+            helper.setTo(email);
+            helper.addAttachment("logo.png", new ClassPathResource("logo.png"));
+            helper.setSubject("Change password email from" + APPLICATION_NAME);
+            helper.setText(htmlMsg, true);
+            helper.addAttachment("logo.png", new ClassPathResource("logo.png"));
+            emailSender.send(msg);
+            LOGGER.info(" change password email was send to e-mail: " + email);
+        } catch (MessagingException ex) {
+            LOGGER.error("change password email: something is wrong" + ex);
+            emailError(adminEmail, VERIFICATION_SERVICE, lastName, firstName);
+            LOGGER.error("send error-email to administrator" + mail);
             System.out.println(ex.getMessage());
         }
         return "Email send!";
@@ -85,19 +131,19 @@ public class EmailServiceImpl implements EmailService {
         String email = mail.getEmail();
         String picture = mail.getPicture();
         String lastName = mail.getLastName();
-        if(lastName == null){
+        if (lastName == null) {
             lastName = " ";
         }
         String firstName = mail.getFirstName();
-        if(firstName == null) {
+        if (firstName == null) {
             firstName = " ";
         }
         String childFirstName = mail.getChildFirstName();
-        if(childFirstName == null){
+        if (childFirstName == null) {
             childFirstName = " ";
         }
         String childSecondName = mail.getChildSecondName();
-        if(childSecondName == null){
+        if (childSecondName == null) {
             childSecondName = " ";
         }
 
@@ -127,7 +173,7 @@ public class EmailServiceImpl implements EmailService {
         } catch (MessagingException ex) {
             LOGGER.error("gymnast atsarat briut email: something is wrong" + ex);
             emailError(adminEmail, GYMNAST_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator"+ mail);
+            LOGGER.error("send error-email to administrator" + mail);
             System.out.println(ex.getMessage());
             return "Error -> email not send";
         }
@@ -139,19 +185,19 @@ public class EmailServiceImpl implements EmailService {
         String email = mail.getEmail();
         String picture = mail.getPicture();
         String lastName = mail.getLastName();
-        if(lastName == null){
+        if (lastName == null) {
             lastName = " ";
         }
         String firstName = mail.getFirstName();
-        if(firstName == null) {
+        if (firstName == null) {
             firstName = " ";
         }
         String childFirstName = mail.getChildFirstName();
-        if(childFirstName == null){
+        if (childFirstName == null) {
             childFirstName = " ";
         }
         String childSecondName = mail.getChildSecondName();
-        if(childSecondName == null){
+        if (childSecondName == null) {
             childSecondName = " ";
         }
 
@@ -179,8 +225,8 @@ public class EmailServiceImpl implements EmailService {
             LOGGER.info(" School Ben Gurion atsarat briut was send to e-mail: " + email);
         } catch (MessagingException ex) {
             LOGGER.error("scgool Ben Gurion atsarat briut email: something is wrong" + ex);
-            emailError(adminEmail,SCHOOL_SERVICE, lastName, firstName);
-            LOGGER.error("send error-email to administrator"+ mail);
+            emailError(adminEmail, SCHOOL_SERVICE, lastName, firstName);
+            LOGGER.error("send error-email to administrator" + mail);
             System.out.println(ex.getMessage());
         }
         return "Email send!";
@@ -191,19 +237,19 @@ public class EmailServiceImpl implements EmailService {
         String email = mail.getEmail();
         String picture = mail.getPicture();
         String lastName = mail.getLastName();
-        if(lastName == null){
+        if (lastName == null) {
             lastName = " ";
         }
         String firstName = mail.getFirstName();
-        if(firstName == null) {
+        if (firstName == null) {
             firstName = " ";
         }
         String childFirstName = mail.getChildFirstName();
-        if(childFirstName == null){
+        if (childFirstName == null) {
             childFirstName = " ";
         }
         String childSecondName = mail.getChildSecondName();
-        if(childSecondName == null){
+        if (childSecondName == null) {
             childSecondName = " ";
         }
 
@@ -266,4 +312,6 @@ public class EmailServiceImpl implements EmailService {
             LOGGER.error("something wrong with error e-mail");
         }
     }
+
+
 }

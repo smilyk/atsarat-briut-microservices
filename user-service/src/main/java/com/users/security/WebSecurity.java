@@ -25,7 +25,20 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_URL)
-                .permitAll().anyRequest().authenticated()
+                .permitAll()
+                /**проверка e-mail - разрешена всем**/
+                .antMatchers(HttpMethod.GET, SecurityConstants.VERIFICATION_EMAIL_URL)
+                .permitAll()
+                /**изменение пароля - доступно всем**/
+                .antMatchers(HttpMethod.POST, SecurityConstants.PASSWORD_RESET_REQUEST_URL)
+                .permitAll()
+                /**изменение пароля - доступно всем**/
+                .antMatchers(HttpMethod.POST, SecurityConstants.PASSWORD_RESET_REQUEST_URL)
+                .permitAll()
+                /**вход по ссылке для изменения пароля из письма доступен всем*/
+                .antMatchers(HttpMethod.POST, SecurityConstants.PASSWORD_RESET_URL)
+                .permitAll()
+                .anyRequest().authenticated()
                 .and()
                 /**
                  * фильтр для всех обьектов, которые проходят через процедуру аутентификации

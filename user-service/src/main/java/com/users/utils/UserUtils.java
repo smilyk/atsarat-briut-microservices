@@ -33,7 +33,7 @@ public class UserUtils {
     /**
      * проверка  срока действительности токена
      **/
-    public boolean hasTokenExpired(String token) {
+    public static boolean hasTokenExpired(String token) {
         boolean rez = false;
         try {
             Claims claims = Jwts.parser().setSigningKey(SecurityConstants.getTokenSecret()).parseClaimsJws(token)
@@ -45,6 +45,17 @@ public class UserUtils {
             rez = true;
         }
         return rez;
+    }
+
+    /**   Создание токена для изменения пароляю. Отличается от generateEmailVerificationToken срокос действия (1 день)**/
+    public String generatePasswordResetToken(String userId)
+    {
+        String token = Jwts.builder()
+                .setSubject(userId)
+                .setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
+                .signWith(SignatureAlgorithm.HS512, SecurityConstants.getTokenSecret())
+                .compact();
+        return token;
     }
 }
 
