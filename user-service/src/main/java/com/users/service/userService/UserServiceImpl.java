@@ -203,6 +203,15 @@ public class UserServiceImpl implements UserService {
         Optional<Users> optionalUser = userRepo.findByMainEmail(email);
         if(!optionalUser.isPresent())
             throw new UsernameNotFoundException(email);
-        return new User(optionalUser.get().getMainEmail(), optionalUser.get().getPassword(), new ArrayList<>());
+        /**
+         * если optionalUser.get().getConfirmEmail(), == false -> login вернет error
+         */
+        return new User(optionalUser.get().getMainEmail(),
+                optionalUser.get().getPassword(),
+                optionalUser.get().getConfirmEmail(),
+                true, true, true, new ArrayList<>());
     }
+
+//        return new User(optionalUser.get().getMainEmail(), optionalUser.get().getPassword(), new ArrayList<>());
+//    }
 }
