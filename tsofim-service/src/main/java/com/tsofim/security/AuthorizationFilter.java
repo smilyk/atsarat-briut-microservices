@@ -61,7 +61,6 @@ public class AuthorizationFilter extends BasicAuthenticationFilter {
         if (userId == null) {
             return null;
         }
-
         return new UsernamePasswordAuthenticationToken(userId, null, new ArrayList<>());
 
     }
