@@ -5784,3 +5784,13 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-11-15 16:54:16.096  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-15 16:57:40.841  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m7s231ms).
 2020-11-15 17:01:53.409  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:06:53.421  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:11:24.837  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/children-service.properties
+2020-11-15 17:11:24.849  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/application.properties
+2020-11-15 17:11:53.433  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:14:59.116  INFO MacBook-Pro --- [nio-8012-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/children-service.properties
+2020-11-15 17:14:59.120  INFO MacBook-Pro --- [nio-8012-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/application.properties
+2020-11-15 17:15:43.527  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/children-service.properties
+2020-11-15 17:15:43.532  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-2645787173701902508/application.properties
+2020-11-15 17:16:53.441  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:21:53.453  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration

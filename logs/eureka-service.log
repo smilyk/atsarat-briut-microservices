@@ -1716,3 +1716,25 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2020-11-15 17:04:29.547  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
 2020-11-15 17:05:29.557  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
 2020-11-15 17:06:29.555  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-15 17:07:29.556  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-15 17:08:19.024  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:08:29.557  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:09:29.562  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-15 17:10:29.563  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:11:29.569  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 5ms
+2020-11-15 17:12:29.570  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:13:19.037  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:13:29.573  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:14:29.573  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:15:29.576  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:15:50.824  INFO MacBook-Pro --- [nio-8761-exec-2] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:b7301349184b36f2e19f07ffb47cd29e with status UP (replication=false)
+2020-11-15 17:15:51.337  INFO MacBook-Pro --- [nio-8761-exec-4] c.n.e.r.AbstractInstanceRegistry         : Registered instance CHILDREN-SERVICE/children-service:b7301349184b36f2e19f07ffb47cd29e with status UP (replication=true)
+2020-11-15 17:16:29.575  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:17:29.579  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 3ms
+2020-11-15 17:18:19.046  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-15 17:18:21.076  INFO MacBook-Pro --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2020-11-15 17:18:29.583  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 2ms
+2020-11-15 17:19:29.589  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 4ms
+2020-11-15 17:20:29.590  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:21:29.591  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 0ms
+2020-11-15 17:22:29.595  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
