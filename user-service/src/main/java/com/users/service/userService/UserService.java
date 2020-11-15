@@ -17,6 +17,8 @@ public interface UserService extends UserDetailsService {
 
 //    confirm-email
     Boolean verifyEmailToken(String token);
+//    need for addint in to token userUuid
+    UserDto getUser(String email);
 
 
 

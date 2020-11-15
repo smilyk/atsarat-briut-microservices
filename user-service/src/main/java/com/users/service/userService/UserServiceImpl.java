@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -185,6 +186,16 @@ public class UserServiceImpl implements UserService {
             }
         }
         return rez;
+    }
+
+    @Override
+    public UserDto getUser(String email) {
+        Optional<Users> optionalUser = userRepo.findByMainEmail(email);
+        if(!optionalUser.isPresent())
+            throw new UsernameNotFoundException(email);
+        UserDto returnValue = new UserDto();
+        BeanUtils.copyProperties(optionalUser.get(), returnValue);
+        return returnValue;
     }
 
     @Override
