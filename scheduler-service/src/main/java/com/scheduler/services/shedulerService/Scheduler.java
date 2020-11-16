@@ -4,6 +4,8 @@ package com.scheduler.services.shedulerService;
 import com.scheduler.entity.PlanEntity;
 import com.scheduler.enums.LoggerMessages;
 import com.scheduler.repository.PlanRepo;
+import com.scheduler.services.hystrix.LoginUserHystrixDto;
+import com.scheduler.services.hystrix.UserServiceClient;
 import com.scheduler.services.rabbitService.RabbitService;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -26,6 +28,8 @@ public class Scheduler {
     PlanRepo planRepo;
     @Autowired
     RabbitService rabbitService;
+    @Autowired
+    UserServiceClient userServiceClient;
 
     ModelMapper modelMapper = new ModelMapper();
     private static final Logger LOGGER = LoggerFactory.getLogger(Scheduler.class);
@@ -60,6 +64,7 @@ public class Scheduler {
                                 .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
                     for (PlanEntity record : dateRecordList) {
+                        String token = getToken();
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
                                 + record.getUuidChild() + " withDay " + "MONDAY");
@@ -72,6 +77,7 @@ public class Scheduler {
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
                     for (PlanEntity record : dateRecordList) {
+                        String token = getToken();
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
                                 + record.getUuidChild() + " withDay " + "TUESDAY");
@@ -83,6 +89,7 @@ public class Scheduler {
                         .filter(rec -> rec.getWednesday() != null)
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
+                    String token = getToken();
                     for (PlanEntity record : dateRecordList) {
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
@@ -95,6 +102,7 @@ public class Scheduler {
                         .filter(rec -> rec.getThursday() != null)
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
+                    String token = getToken();
                     for (PlanEntity record : dateRecordList) {
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
@@ -107,6 +115,7 @@ public class Scheduler {
                         .filter(rec -> rec.getFriday() != null)
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
+                    String token = getToken();
                     for (PlanEntity record : dateRecordList) {
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
@@ -120,6 +129,7 @@ public class Scheduler {
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
                     for (PlanEntity record : dateRecordList) {
+                        String token = getToken();
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
                                 + record.getUuidChild() + " withDay " + "SATURDAY");
@@ -132,6 +142,7 @@ public class Scheduler {
                         .collect(Collectors.toList());
                 if (dateRecordList.size() != 0) {
                     for (PlanEntity record : dateRecordList) {
+                        String token = getToken();
                         rabbitService.sendMessageToServer(record);
                         LOGGER.info(" send request to + " + record.getService() + " with UUIDChild = "
                                 + record.getUuidChild() + " withDay " + "SUNDAY");
@@ -145,6 +156,17 @@ public class Scheduler {
         }
     }
 
+    private String getToken() {
+        String adminEmail = "admin@admin.com";
+        String adminPassword = "adminPassword";
+        LoginUserHystrixDto user = LoginUserHystrixDto.builder()
+                .mainEmail(adminEmail)
+                .password(adminPassword)
+                .build();
+    userServiceClient.loginUser(user);
+    return "";
+    }
+
     private void checkDate() {
         LocalDateTime dateNow = LocalDateTime.now();
         LOGGER.info(dateNow + " check date" );
@@ -156,6 +178,7 @@ public class Scheduler {
              .collect(Collectors.toList());
         if (dateRecordList.size() != 0) {
             for (PlanEntity record : dateRecordList) {
+                String token = getToken();
                 rabbitService.sendMessageToServer(record);
                 LOGGER.info("send request to + " + record.getService() + "with UUIDChild = "
                         + record.getUuidChild() + " date " + record.getUuidPlan());

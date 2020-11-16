@@ -16,6 +16,6 @@ public class GymnastController {
     @GetMapping("/parse/{uuidChild}")
 
     public String parseShop(@PathVariable String uuidChild){
-       return gymnastCrawlerService.sendFormToGymnast(uuidChild);
+        return gymnastCrawlerService.sendFormToGymnast(uuidChild);
     }
 }

@@ -35,6 +35,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .and().csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_URL)
                 .permitAll()
+                /**create admin*/
+                .antMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_ADMIN_URL)
+                .permitAll()
                 /**проверка e-mail - разрешена всем**/
                 .antMatchers(HttpMethod.GET, SecurityConstants.VERIFICATION_EMAIL_URL)
                 .permitAll()
@@ -47,8 +50,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 /**вход по ссылке для изменения пароля из письма доступен всем*/
                 .antMatchers(HttpMethod.POST, SecurityConstants.PASSWORD_RESET_URL)
                 .permitAll()
-               /** all from zuul-service*/
-                .antMatchers("/user-service/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 /**

@@ -4,6 +4,7 @@ package com.gymnast.services.hystrix.user.parent;
 
 import com.gymnast.dto.Response;
 import feign.FeignException;
+import feign.Headers;
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +12,14 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 @FeignClient(name = "user-service", fallbackFactory = UserFallbackFactory.class)
 public interface UserServiceClient {
     @GetMapping("/users/v1/{uuidUser}")
-//    @Headers("Authorization: {token}")
-    public Response getUserByUserUuid(@PathVariable String uuidUser
-//                                               @RequestHeader("Authorization") String token);
-    );
+    @Headers("Authorization: {token}")
+    public Response getUserByUserUuid(@PathVariable String uuidUser,
+                                               @RequestHeader("Authorization") String token);
     @Component
     class UserFallbackFactory implements FallbackFactory<UserServiceClient> {
         @Override
@@ -38,9 +39,8 @@ public interface UserServiceClient {
         }
 
         @Override
-        public Response getUserByUserUuid(String uuidUser
-//                                                   String req) {
-        ){
+        public Response getUserByUserUuid(String uuidUser,
+                                                   String req) {
             if (cause instanceof FeignException && ((FeignException) cause).status() == 404) {
                 logger.error("404 error took place when getUserByUserUuid was called with userId: " + uuidUser + ". Error message: "
                         + cause.getLocalizedMessage());

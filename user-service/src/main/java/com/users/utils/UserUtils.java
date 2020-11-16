@@ -57,5 +57,16 @@ public class UserUtils {
                 .compact();
         return token;
     }
+
+    /**   Создание токена для супер админа. Отличается от generateEmailVerificationToken срокос действия (1 день)**/
+    public String generateSuperAdminToken(String userId)
+    {
+        String token = Jwts.builder()
+                .setSubject(userId)
+                .signWith(SignatureAlgorithm.HS512, SecurityConstants.getTokenSecret())
+                .compact();
+        return token;
+    }
+
 }
 

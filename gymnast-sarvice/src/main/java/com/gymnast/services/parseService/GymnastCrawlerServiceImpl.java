@@ -32,6 +32,10 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
     private String gymnastUrl;
     @Value("${service}")
     private String service;
+    @Value("authorization.token.header.prefix")
+    private String tokenPrefix;
+    @Value("admin.token")
+    private String adminToken;
 
     @Autowired
     ChildServiceClient childHystrix;
@@ -46,10 +50,11 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
     ModelMapper modelMapper = new ModelMapper();
     private static final Logger LOGGER = LoggerFactory.getLogger(GymnastCrawlerServiceImpl.class);
     LocalDate start = LocalDate.now();
+    String TOKEN = tokenPrefix + " " + adminToken;
+
     @Override
     public String sendFormToGymnast(String uuidChild) {
-
-        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild);
+        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild, TOKEN);
         ChildHystrixDto child = modelMapper.map(childFromHystrix.getContent(), ChildHystrixDto.class);
         String childFirstNAme = child.getFirstName();
         String childSecondName = child.getSecondName();
@@ -63,23 +68,23 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
         String parentTZ;
         String email;
         if (respPersonUuid != null) {
-            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid);
+            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid, TOKEN);
             respPerson = modelMapper.map(respPersonFromHystrix.getContent(), RespPersonHystrixDto.class);
             parentFirstName = respPerson.getFirstName();
             parentSecondName = respPerson.getSecondName();
             parentTZ = respPerson.getTzRespPers();
             email = respPerson.getEmailRespPerson();
         } else {
-            userHystrix.getUserByUserUuid(childParentUuid);
-            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid);
+            userHystrix.getUserByUserUuid(childParentUuid, TOKEN);
+            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid, TOKEN);
             parent = modelMapper.map(parentFromHystrix.getContent(), UserHystrixDto.class);
             parentFirstName = parent.getFirstName();
             parentSecondName = parent.getSecondName();
             parentTZ = parent.getTz();
-            if(parent.getAltEmail() == null){
-                email=parent.getMainEmail();
-            }else{
-                email=parent.getAltEmail();
+            if (parent.getAltEmail() == null) {
+                email = parent.getMainEmail();
+            } else {
+                email = parent.getAltEmail();
             }
         }
 
@@ -89,7 +94,7 @@ public class GymnastCrawlerServiceImpl implements GymnastCrawlerService {
         WebElement tzChild = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"));
         tzChild.sendKeys(childTZ);
         WebElement parentName = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]"));
-        parentName.sendKeys(parentFirstName +  " " + parentSecondName);
+        parentName.sendKeys(parentFirstName + " " + parentSecondName);
 //       first check
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/label[1]/div[1]/div[1]/div[2]")).click();
 //       second check
