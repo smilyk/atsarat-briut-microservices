@@ -44,6 +44,11 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
 
     @Value("${service}")
     private String service;
+
+    @Value("authorization.token.header.prefix")
+    private String tokenPrefix;
+    @Value("admin.token")
+    private String adminToken;
     @Autowired
     ChildServiceClient childHystrix;
     @Autowired
@@ -59,10 +64,12 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
     LocalDate start = LocalDate.now();
     private static final Logger LOGGER = LoggerFactory.getLogger(TsofimCrawlerServiceImpl.class);
     ModelMapper modelMapper = new ModelMapper();
+    String TOKEN = tokenPrefix + " " + adminToken;
+
 
     @Override
     public String sendFormToTsofim(String uuidChild) {
-        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild);
+        Response childFromHystrix = this.childHystrix.getChildByChildUuid(uuidChild, TOKEN);
         ChildHystrixDto child = modelMapper.map(childFromHystrix.getContent(), ChildHystrixDto.class);
         String childFirstNAme = child.getFirstName();
         String childSecondName = child.getSecondName();
@@ -76,15 +83,15 @@ public class TsofimCrawlerServiceImpl implements TsofimCrawlerService {
         String parentTZ;
         String email;
         if (respPersonUuid != null) {
-            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid);
+            Response respPersonFromHystrix = respPersonHystrix.getResponsePersonByUserUuid(respPersonUuid, TOKEN);
             respPerson = modelMapper.map(respPersonFromHystrix.getContent(), RespPersonHystrixDto.class);
             parentFirstName = respPerson.getFirstName();
             parentSecondName = respPerson.getSecondName();
             parentTZ = respPerson.getTzRespPers();
             email = respPerson.getEmailRespPerson();
         } else {
-            userHystrix.getUserByUserUuid(childParentUuid);
-            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid);
+            userHystrix.getUserByUserUuid(childParentUuid, TOKEN);
+            Response parentFromHystrix = userHystrix.getUserByUserUuid(childParentUuid, TOKEN);
             parent = modelMapper.map(parentFromHystrix.getContent(), UserHystrixDto.class);
             parentFirstName = parent.getFirstName();
             parentSecondName = parent.getSecondName();
