@@ -9332,3 +9332,5 @@ com.netflix.zuul.exception.ZuulException:
 2020-11-16 12:00:02.365  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-16 12:05:02.383  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-16 12:10:02.402  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-16 12:15:02.415  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-16 12:20:02.436  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
