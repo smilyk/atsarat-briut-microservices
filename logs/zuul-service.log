@@ -9334,3 +9334,332 @@ com.netflix.zuul.exception.ZuulException:
 2020-11-16 12:10:02.402  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-16 12:15:02.415  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-16 12:20:02.436  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-16 18:45:49.035  INFO MacBook-Pro --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.1.5.Final
+2020-11-16 18:45:52.943  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-16 18:45:53.501  WARN MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: Could not extract response: no suitable HttpMessageConverter found for response type [class org.springframework.cloud.config.environment.Environment] and content type [text/html;charset=UTF-8]
+2020-11-16 18:45:53.520  INFO MacBook-Pro --- [           main] c.z.ZuulServiceApplication               : No active profile set, falling back to default profiles: default
+2020-11-16 18:45:58.166  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:45:59.302  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:45:59.308  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-16 18:45:59.342  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 JDBC repository interfaces.
+2020-11-16 18:45:59.370  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:45:59.373  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-16 18:45:59.390  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JPA repository interfaces.
+2020-11-16 18:45:59.550  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:45:59.844  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:46:00.910  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:46:02.451  INFO MacBook-Pro --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=a8f36f86-a15f-33da-8d16-c044a0a3030d
+2020-11-16 18:46:02.588  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-11-16 18:46:02.606  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-11-16 18:46:02.621  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-11-16 18:46:04.531  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:46:04.551  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:46:04.758  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:46:06.412  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8011 (http)
+2020-11-16 18:46:06.443  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8011"]
+2020-11-16 18:46:06.446  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-11-16 18:46:06.447  INFO MacBook-Pro --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-16 18:46:07.268  INFO MacBook-Pro --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-11-16 18:46:07.285  INFO MacBook-Pro --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13652 ms
+2020-11-16 18:46:08.037  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-16 18:46:08.039  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-16 18:46:08.077  INFO MacBook-Pro --- [           main] c.n.c.DynamicPropertyFactory             : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@682fe17b
+2020-11-16 18:46:08.687  WARN MacBook-Pro --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-16 18:46:09.183  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-16 18:46:09.622  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-16 18:46:09.906  INFO MacBook-Pro --- [         task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-16 18:46:10.152  INFO MacBook-Pro --- [         task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-16 18:46:10.977  INFO MacBook-Pro --- [         task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-16 18:46:11.432  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-11-16 18:46:12.954  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-11-16 18:46:13.018  INFO MacBook-Pro --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6f155b44-7438-436f-bb7f-517cd7222848
+
+2020-11-16 18:46:13.133  INFO MacBook-Pro --- [         task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-16 18:46:13.579  WARN MacBook-Pro --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+2020-11-16 18:46:13.826  INFO MacBook-Pro --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-16 18:46:14.321  INFO MacBook-Pro --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-16 18:46:14.341  INFO MacBook-Pro --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-16 18:46:14.347  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-11-16 18:46:14.347  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-16 18:46:14.348  INFO MacBook-Pro --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2020-11-16 18:46:14.381  INFO MacBook-Pro --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2020-11-16 18:46:14.392  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2020-11-16 18:46:14.451  INFO MacBook-Pro --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-16 18:46:14.456 ERROR MacBook-Pro --- [           main] o.s.b.SpringApplication                  : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zuul.ZuulServiceApplication.main(ZuulServiceApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 22 more
+Caused by: java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:287)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:117)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:102)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:88)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry$RequestMatchers.antMatchers(AbstractRequestMatcherRegistry.java:272)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.antMatchers(AbstractRequestMatcherRegistry.java:108)
+	at com.zuul.security.WebSecurity.configure(WebSecurity.java:29)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:94)
+	at com.zuul.security.WebSecurity$$EnhancerBySpringCGLIB$$55ba1427.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:370)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:324)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 more
+2020-11-16 18:48:39.855  INFO MacBook-Pro --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.1.5.Final
+2020-11-16 18:48:42.454  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-16 18:48:43.557  WARN MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: Could not extract response: no suitable HttpMessageConverter found for response type [class org.springframework.cloud.config.environment.Environment] and content type [text/html;charset=UTF-8]
+2020-11-16 18:48:43.565  INFO MacBook-Pro --- [           main] c.z.ZuulServiceApplication               : No active profile set, falling back to default profiles: default
+2020-11-16 18:48:47.950  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:48:48.889  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:48:48.902  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-16 18:48:48.956  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 JDBC repository interfaces.
+2020-11-16 18:48:48.987  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:48:48.990  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-16 18:48:49.005  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JPA repository interfaces.
+2020-11-16 18:48:49.148  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:48:49.366  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:48:49.638  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:48:50.717  INFO MacBook-Pro --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=a8f36f86-a15f-33da-8d16-c044a0a3030d
+2020-11-16 18:48:50.868  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-11-16 18:48:50.895  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-11-16 18:48:50.911  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-11-16 18:48:53.056  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:48:53.071  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:48:53.193  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:48:54.886  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8011 (http)
+2020-11-16 18:48:54.924  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8011"]
+2020-11-16 18:48:54.925  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-11-16 18:48:54.926  INFO MacBook-Pro --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-16 18:48:55.401  INFO MacBook-Pro --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-11-16 18:48:55.402  INFO MacBook-Pro --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11758 ms
+2020-11-16 18:48:56.154  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-16 18:48:56.155  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-16 18:48:56.188  INFO MacBook-Pro --- [           main] c.n.c.DynamicPropertyFactory             : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6f87a7c7
+2020-11-16 18:48:56.560  WARN MacBook-Pro --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-16 18:48:56.966  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-16 18:48:57.631  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-16 18:48:57.894  INFO MacBook-Pro --- [         task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-16 18:48:58.056  INFO MacBook-Pro --- [         task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-16 18:48:58.548  INFO MacBook-Pro --- [         task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-16 18:48:59.285  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-11-16 18:49:01.173  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-11-16 18:49:01.276  INFO MacBook-Pro --- [         task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-16 18:49:01.283  INFO MacBook-Pro --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7a86a40f-2101-4faf-b091-9e53224c6273
+
+2020-11-16 18:49:01.642  WARN MacBook-Pro --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+2020-11-16 18:49:01.735  INFO MacBook-Pro --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-16 18:49:02.497  INFO MacBook-Pro --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-16 18:49:02.564  INFO MacBook-Pro --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-16 18:49:02.571  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-11-16 18:49:02.572  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-16 18:49:02.573  INFO MacBook-Pro --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2020-11-16 18:49:02.623  INFO MacBook-Pro --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2020-11-16 18:49:02.642  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2020-11-16 18:49:02.859  INFO MacBook-Pro --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-16 18:49:02.865 ERROR MacBook-Pro --- [           main] o.s.b.SpringApplication                  : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.zuul.ZuulServiceApplication.main(ZuulServiceApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 22 more
+Caused by: java.lang.IllegalArgumentException: Pattern cannot be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:287)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:117)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:102)
+	at org.springframework.security.web.util.matcher.AntPathRequestMatcher.<init>(AntPathRequestMatcher.java:88)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry$RequestMatchers.antMatchers(AbstractRequestMatcherRegistry.java:272)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.antMatchers(AbstractRequestMatcherRegistry.java:108)
+	at com.zuul.security.WebSecurity.configure(WebSecurity.java:29)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:94)
+	at com.zuul.security.WebSecurity$$EnhancerBySpringCGLIB$$78970fc3.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:370)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:324)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 more
+2020-11-16 18:50:09.997  INFO MacBook-Pro --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.1.5.Final
+2020-11-16 18:50:12.794  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-16 18:50:17.683  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=zuul-service, profiles=[default], label=main, version=63cf2abc94cde1eabd50cd0c154628be0c48e9b7, state=null
+2020-11-16 18:50:17.687  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/zuul-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-16 18:50:17.926  INFO MacBook-Pro --- [           main] c.z.ZuulServiceApplication               : No active profile set, falling back to default profiles: default
+2020-11-16 18:50:19.807  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:50:22.177  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:50:23.631  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:50:23.642  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-16 18:50:23.678  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 JDBC repository interfaces.
+2020-11-16 18:50:23.704  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-16 18:50:23.708  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-16 18:50:23.722  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JPA repository interfaces.
+2020-11-16 18:50:23.933  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:50:24.151  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-16 18:50:25.673  INFO MacBook-Pro --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=313181ea-e4fb-3f31-aea3-dfbe647700a0
+2020-11-16 18:50:25.951  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-11-16 18:50:25.971  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-11-16 18:50:25.986  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-11-16 18:50:28.274  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:50:28.289  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:50:28.422  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-16 18:50:30.252  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8011 (http)
+2020-11-16 18:50:30.297  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8011"]
+2020-11-16 18:50:30.300  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-11-16 18:50:30.304  INFO MacBook-Pro --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-16 18:50:30.647  INFO MacBook-Pro --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-11-16 18:50:30.647  INFO MacBook-Pro --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12639 ms
+2020-11-16 18:50:31.211  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-16 18:50:31.213  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-16 18:50:31.326  INFO MacBook-Pro --- [           main] c.n.c.DynamicPropertyFactory             : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@58647985
+2020-11-16 18:50:32.063  WARN MacBook-Pro --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-16 18:50:32.557  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-16 18:50:32.896  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-16 18:50:33.057  INFO MacBook-Pro --- [         task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-16 18:50:33.227  INFO MacBook-Pro --- [         task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-16 18:50:33.690  INFO MacBook-Pro --- [         task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-16 18:50:34.035  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-11-16 18:50:35.434  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.ServletEndpointRegistrar     : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-11-16 18:50:35.436  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.ServletEndpointRegistrar     : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+2020-11-16 18:50:35.538  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-11-16 18:50:35.703  INFO MacBook-Pro --- [         task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-16 18:50:36.434  INFO MacBook-Pro --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 614754c1-9365-444e-b6b5-4805e6cc698f
+
+2020-11-16 18:50:37.168  INFO MacBook-Pro --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cdb290c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e284d90, org.springframework.security.web.header.HeaderWriterFilter@6731b6bd, org.springframework.security.web.authentication.logout.LogoutFilter@3ce4eb42, com.zuul.security.AuthorizationFilter@77f95e19, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f2feab7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2cbae0f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4607cbe2, org.springframework.security.web.session.SessionManagementFilter@41ae9f11, org.springframework.security.web.access.ExceptionTranslationFilter@2c5b4b91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c22cf4d]
+2020-11-16 18:50:37.413  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-16 18:50:37.414  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-16 18:50:37.614  INFO MacBook-Pro --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-16 18:50:37.684  INFO MacBook-Pro --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-16 18:50:40.470  INFO MacBook-Pro --- [           main] onConfiguration$FunctionBindingRegistrar : Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-11-16 18:50:43.512  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-11-16 18:50:46.328  WARN MacBook-Pro --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-16 18:50:47.488  INFO MacBook-Pro --- [           main] o.s.c.n.z.ZuulFilterInitializer          : Starting filter initializer
+2020-11-16 18:50:48.118  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 27 endpoint(s) beneath base path '/actuator'
+2020-11-16 18:50:49.282  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2020-11-16 18:50:49.358  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-16 18:50:49.359  INFO MacBook-Pro --- [           main] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-11-16 18:50:49.360  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : started bean '_org.springframework.integration.errorLogger'
+2020-11-16 18:50:49.672  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-16 18:50:51.234  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=zuul-service, profiles=[default], label=main, version=63cf2abc94cde1eabd50cd0c154628be0c48e9b7, state=null
+2020-11-16 18:50:51.235  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/zuul-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-16 18:50:51.974  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-16 18:50:51.977  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-16 18:50:52.014  INFO MacBook-Pro --- [           main] o.s.c.n.e.InstanceInfoFactory            : Setting initial instance status as: STARTING
+2020-11-16 18:50:52.138  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Initializing Eureka in region us-east-1
+2020-11-16 18:50:52.571  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON encoding codec LegacyJacksonJson
+2020-11-16 18:50:52.572  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON decoding codec LegacyJacksonJson
+2020-11-16 18:50:53.525  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML encoding codec XStreamXml
+2020-11-16 18:50:53.526  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML decoding codec XStreamXml
+2020-11-16 18:50:54.902  INFO MacBook-Pro --- [           main] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-16 18:50:55.018  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-16 18:50:55.020  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-16 18:50:55.021  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-16 18:50:55.021  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-16 18:50:55.022  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-16 18:50:55.024  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application version is -1: true
+2020-11-16 18:50:55.026  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-16 18:50:55.718  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : The response status is 200
+2020-11-16 18:50:55.727  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Starting heartbeat executor: renew interval is: 30
+2020-11-16 18:50:55.744  INFO MacBook-Pro --- [           main] c.n.d.InstanceInfoReplicator             : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-16 18:50:55.757  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Discovery Client initialized at timestamp 1605545455754 with initial instances count: 4
+2020-11-16 18:50:56.061 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-16 18:50:56.546  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-11-16 18:50:56.739  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5122387:0/SimpleConnection@10b9956a [delegate=amqp://user@127.0.0.1:5672/, localPort= 59152]
+2020-11-16 18:50:56.914  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusOutput' has 1 subscriber(s).
+2020-11-16 18:50:56.920  INFO MacBook-Pro --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ZUUL-SERVICE with eureka with status UP
+2020-11-16 18:50:56.922  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Saw local status change event StatusChangeEvent [timestamp=1605545456922, current=UP, previous=STARTING]
+2020-11-16 18:50:56.926  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_ZUUL-SERVICE/zuul-service:d27cc4e261472ffb66dd8f3eeb350c71: registering service...
+2020-11-16 18:50:57.004  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_ZUUL-SERVICE/zuul-service:d27cc4e261472ffb66dd8f3eeb350c71 - registration status: 204
+2020-11-16 18:50:57.317  INFO MacBook-Pro --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.-QDRKMzVRFWo6SmoEM5UAQ, bound to: springCloudBus
+2020-11-16 18:50:57.388  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.-QDRKMzVRFWo6SmoEM5UAQ.errors' has 1 subscriber(s).
+2020-11-16 18:50:57.391  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.-QDRKMzVRFWo6SmoEM5UAQ.errors' has 2 subscriber(s).
+2020-11-16 18:50:57.572  INFO MacBook-Pro --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.-QDRKMzVRFWo6SmoEM5UAQ'
+2020-11-16 18:50:57.577  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8011"]
+2020-11-16 18:50:57.693  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8011 (http) with context path ''
+2020-11-16 18:50:57.699  INFO MacBook-Pro --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8011
+2020-11-16 18:50:57.719  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-16 18:50:57.727  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-16 18:50:58.146  INFO MacBook-Pro --- [           main] c.z.ZuulServiceApplication               : Started ZuulServiceApplication in 51.204 seconds (JVM running for 61.192)
+2020-11-16 18:51:06.102  WARN MacBook-Pro --- [gistrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=zuul-service, managementUrl=http://macbook-pro:8011/actuator, healthUrl=http://macbook-pro:8011/actuator/health, serviceUrl=http://macbook-pro:8011/) at spring-boot-admin ([http://localhost:9999/instances]): I/O error on POST request for "http://localhost:9999/instances": Connect to localhost:9999 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:9999 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused). Further attempts are logged on DEBUG level
