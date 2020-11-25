@@ -28218,3 +28218,95 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-11-25 15:53:42.653  WARN MacBook-Pro --- [get_localhost-9] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-9 due to permanent error
 2020-11-25 15:53:48.497 ERROR MacBook-Pro --- [et_localhost-11] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
 2020-11-25 15:53:48.502  WARN MacBook-Pro --- [et_localhost-11] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-11 due to permanent error
+2020-11-25 15:53:56.229 ERROR MacBook-Pro --- [et_localhost-15] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
+2020-11-25 15:53:56.229  WARN MacBook-Pro --- [et_localhost-15] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-15 due to permanent error
+2020-11-25 15:54:03.692  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Application version is -1: true
+2020-11-25 15:54:03.693  INFO MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-25 15:54:03.697  WARN MacBook-Pro --- [freshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure with status code 401; retrying on another server if available
+2020-11-25 15:54:03.697 ERROR MacBook-Pro --- [freshExecutor-0] c.n.d.DiscoveryClient                    : DiscoveryClient_UNKNOWN/${spring.application.name}:02ef0de785b31c85116b62a3442d3739 - was unable to refresh its cache! status = Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1074)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:988)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1510)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1477)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-25 15:54:05.555 ERROR MacBook-Pro --- [get_localhost-4] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
+2020-11-25 15:54:05.555  WARN MacBook-Pro --- [get_localhost-4] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-4 due to permanent error
+2020-11-25 15:54:08.822 ERROR MacBook-Pro --- [get_localhost-8] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
+2020-11-25 15:54:08.822  WARN MacBook-Pro --- [get_localhost-8] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-8 due to permanent error
+2020-11-25 15:54:12.665 ERROR MacBook-Pro --- [et_localhost-13] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
+2020-11-25 15:54:12.665  WARN MacBook-Pro --- [et_localhost-13] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-13 due to permanent error
+2020-11-25 15:54:18.558 ERROR MacBook-Pro --- [et_localhost-11] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 1 replication tasks
+2020-11-25 15:54:18.563  WARN MacBook-Pro --- [et_localhost-11] c.n.e.u.b.TaskExecutors                  : Discarding 1 tasks of TaskBatchingWorker-target_localhost-11 due to permanent error
+2020-11-25 15:54:19.030  INFO MacBook-Pro --- [extShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UNKNOWN with eureka with status DOWN
+2020-11-25 15:54:19.377  INFO MacBook-Pro --- [nio-8761-exec-6] c.n.e.r.AbstractInstanceRegistry         : Registered instance CONFIG-SERVER/config with status DOWN (replication=false)
+2020-11-25 15:54:19.680  INFO MacBook-Pro --- [nio-8761-exec-9] c.n.e.r.AbstractInstanceRegistry         : Registered instance TSOFIM-SERVICE/tsofim-service:e5d8215d245b3db3bf05b8598a08271c with status DOWN (replication=false)
+2020-11-25 15:54:19.892 ERROR MacBook-Pro --- [get_localhost-0] c.n.e.c.ReplicationTaskProcessor         : Batch update failure with HTTP status code 401; discarding 2 replication tasks
+2020-11-25 15:54:19.892  WARN MacBook-Pro --- [get_localhost-0] c.n.e.u.b.TaskExecutors                  : Discarding 2 tasks of TaskBatchingWorker-target_localhost-0 due to permanent error
+2020-11-25 15:54:19.925  INFO MacBook-Pro --- [a-EvictionTimer] c.n.e.r.AbstractInstanceRegistry         : Running the evict task with compensationTime 1ms
+2020-11-25 15:54:20.024  INFO MacBook-Pro --- [io-8761-exec-10] c.n.e.r.AbstractInstanceRegistry         : Registered instance USER-SERVICE/user-service:b0bb6cab32c3bd8185c5790e95af4599 with status DOWN (replication=false)
+2020-11-25 15:54:20.703 ERROR MacBook-Pro --- [et_localhost-11] c.n.e.c.ReplicationTaskProcessor         : Network level connection to peer localhost; retrying after delay
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.netflix.eureka.cluster.DynamicGZIPContentEncodingFilter.handle(DynamicGZIPContentEncodingFilter.java:48)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
+	at com.netflix.eureka.transport.JerseyReplicationClient.submitBatchUpdates(JerseyReplicationClient.java:117)
+	at com.netflix.eureka.cluster.ReplicationTaskProcessor.process(ReplicationTaskProcessor.java:80)
+	at com.netflix.eureka.util.batcher.TaskExecutors$BatchWorkerRunnable.run(TaskExecutors.java:190)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.NoHttpResponseException: localhost:8761 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 10 more
+2020-11-25 15:54:24.743  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-11-25 15:54:25.398  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-11-25 15:54:25.399  INFO MacBook-Pro --- [extShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.v08dODdAR5GqFRaIgkrBig'
+2020-11-25 15:54:25.598  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.v08dODdAR5GqFRaIgkrBig.errors' has 1 subscriber(s).
+2020-11-25 15:54:25.861  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.v08dODdAR5GqFRaIgkrBig.errors' has 0 subscriber(s).
+2020-11-25 15:54:25.932  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-25 15:54:25.934  INFO MacBook-Pro --- [extShutdownHook] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2020-11-25 15:54:25.934  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : stopped bean '_org.springframework.integration.errorLogger'
+2020-11-25 15:54:25.947  INFO MacBook-Pro --- [extShutdownHook] c.n.e.DefaultEurekaServerContext         : Shutting down ...
+2020-11-25 15:54:26.271  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2020-11-25 15:54:26.316  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2020-11-25 15:54:26.318  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2020-11-25 15:54:26.321  INFO MacBook-Pro --- [extShutdownHook] c.n.s.m.StatsMonitor                     : Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2020-11-25 15:54:26.874  INFO MacBook-Pro --- [extShutdownHook] c.n.e.DefaultEurekaServerContext         : Shut down
+2020-11-25 15:54:27.338  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-11-25 15:54:29.431  INFO MacBook-Pro --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-25 15:54:29.841  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-11-25 15:54:29.842  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-25 15:54:29.850  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2020-11-25 15:54:29.942  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2020-11-25 15:54:30.584  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Shutting down DiscoveryClient ...
+2020-11-25 15:54:31.357  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Completed shut down of DiscoveryClient
