@@ -2,6 +2,8 @@
 #
 [![CircleCI](https://circleci.com/gh/smilyk/atsarat-briut-microservices.svg?style=svg)](https://circleci.com/gh/smilyk/atsarat-briut-microservices)
 #
+[![Build Status](https://travis-ci.org/smilyk/atsarat-briut-microservices.svg?branch=master)](https://travis-ci.org/smilyk/atsarat-briut-microservices)
+#
 PORTS AND NAME:
 user-service
 
