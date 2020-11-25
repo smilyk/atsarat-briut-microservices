@@ -120,3 +120,133 @@
 2020-11-25 10:05:28.603  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/zuul-service.properties
 2020-11-25 10:05:28.621  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
 2020-11-25 10:08:49.643  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:13:49.654  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:18:49.735  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:23:49.756  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:28:49.771  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:33:49.790  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:38:49.810  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:43:49.826  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:48:49.852  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:53:49.883  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:58:49.902  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:03:49.917  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:08:49.943  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:13:49.955  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:18:49.963  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:28:03.115  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m28s962ms).
+2020-11-25 11:29:02.376  WARN MacBook-Pro --- [nio-8012-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: https://github.com/smilyk/briut.git
+2020-11-25 11:29:03.297  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 11:29:03.299  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 11:29:48.930  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:30:05.131  WARN MacBook-Pro --- [nio-8012-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: https://github.com/smilyk/briut.git
+2020-11-25 11:30:05.580  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 11:30:05.580  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 11:34:48.941  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:39:48.957  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:44:48.972  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:48:23.056  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s738ms).
+2020-11-25 11:50:10.143  WARN MacBook-Pro --- [nio-8012-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: https://github.com/smilyk/briut.git
+2020-11-25 11:50:10.562  INFO MacBook-Pro --- [nio-8012-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 11:50:10.562  INFO MacBook-Pro --- [nio-8012-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 11:51:08.753  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:51:29.685  WARN MacBook-Pro --- [nio-8012-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: https://github.com/smilyk/briut.git
+2020-11-25 11:51:30.457  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 11:51:30.457  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 11:56:08.765  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:01:08.781  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:06:08.799  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:11:08.813  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:16:08.842  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:21:10.721  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:26:10.758  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:31:10.822  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:36:10.847  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:40:50.864  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/gymnast-service.properties
+2020-11-25 12:40:50.868  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:41:10.871  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:42:00.711  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/gymnast-service.properties
+2020-11-25 12:42:00.769  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:45:26.200  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/gymnast-service.properties
+2020-11-25 12:45:26.211  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:46:10.885  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:46:28.172  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/gymnast-service.properties
+2020-11-25 12:46:28.173  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:47:44.346  INFO MacBook-Pro --- [nio-8012-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 12:47:44.351  INFO MacBook-Pro --- [nio-8012-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:48:55.400  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 12:48:55.405  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 12:51:10.894  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:56:10.912  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:02:13.295  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m46s768ms).
+2020-11-25 13:02:28.752  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:07:28.766  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:12:28.782  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:15:29.857  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 13:15:29.861  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:16:12.625  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 13:16:12.626  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:17:24.625  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 13:17:24.633  INFO MacBook-Pro --- [nio-8012-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:17:28.793  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:17:48.986  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 13:17:48.989  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:22:28.803  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:27:28.823  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:32:28.841  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:37:28.858  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:41:12.221  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 13:41:12.229  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:42:28.878  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:42:55.205  INFO MacBook-Pro --- [nio-8012-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/scheduler-service.properties
+2020-11-25 13:42:55.208  INFO MacBook-Pro --- [nio-8012-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:47:28.897  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:52:28.922  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:57:28.942  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:58:20.946  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 13:58:20.948  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 13:59:18.509  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 13:59:18.515  INFO MacBook-Pro --- [nio-8012-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:02:28.958  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:03:24.578  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/user-service.properties
+2020-11-25 14:03:24.579  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:04:33.903  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/user-service.properties
+2020-11-25 14:04:33.905  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:05:20.954  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 14:05:20.959  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:06:28.886  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/children-service.properties
+2020-11-25 14:06:28.889  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:07:01.848  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:07:01.849  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:07:28.979  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:08:18.483  INFO MacBook-Pro --- [nio-8012-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:08:18.502  INFO MacBook-Pro --- [nio-8012-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:09:30.538  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:09:30.543  INFO MacBook-Pro --- [io-8012-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:10:40.843  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:10:40.847  INFO MacBook-Pro --- [nio-8012-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:12:28.992  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:13:07.676  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:13:07.678  INFO MacBook-Pro --- [nio-8012-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:14:31.726  INFO MacBook-Pro --- [nio-8012-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/school-service.properties
+2020-11-25 14:14:31.779  INFO MacBook-Pro --- [nio-8012-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:14:32.675  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/tsofim-service.properties
+2020-11-25 14:14:32.678  INFO MacBook-Pro --- [nio-8012-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:15:23.623  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/tsofim-service.properties
+2020-11-25 14:15:23.623  INFO MacBook-Pro --- [nio-8012-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/var/folders/13/vj77kkpn43vft535f8vl4kp40000gn/T/config-repo-3893478594140606188/application.properties
+2020-11-25 14:17:29.006  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:22:29.020  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:33:32.539  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m46s383ms).
+2020-11-25 14:33:45.408  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:58:01.411  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m28s888ms).
+2020-11-25 15:02:44.524  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:07:44.541  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:12:44.567  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:17:44.583  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:22:44.601  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:27:44.621  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:32:44.642  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:37:44.655  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:42:44.674  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:47:44.690  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:52:44.709  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration

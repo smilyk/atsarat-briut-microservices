@@ -633,3 +633,438 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2020-11-25 10:00:35.471  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-25 10:05:35.490  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
 2020-11-25 10:10:35.502  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:15:18.298  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 41cc2c52-9034-4cdd-8a25-6da524d42bcfwas returned.
+2020-11-25 10:15:35.510  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:16:18.327  INFO MacBook-Pro --- [nio-8090-exec-6] c.u.s.u.UserServiceImpl                  : user with provided uuid: 41cc2c52-9034-4cdd-8a25-6da524d42bcfwas returned.
+2020-11-25 10:18:57.436 ERROR MacBook-Pro --- [nio-8090-exec-1] c.u.s.u.UserServiceImpl                  : user with provided uuid: 41cc2c52-9034-4cdd-8a25-6da524d42bcft ot found.
+2020-11-25 10:20:35.592  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:21:21.113  INFO MacBook-Pro --- [nio-8090-exec-4] c.u.s.u.UserServiceImpl                  : verificatiWebSecurity on email was send to email smilyk1982@gmail.com5
+2020-11-25 10:21:21.406  INFO MacBook-Pro --- [nio-8090-exec-4] c.u.s.u.UserServiceImpl                  : added to DB user with e-mail smilyk1982@gmail.com5
+2020-11-25 10:22:58.406  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfcwas returned.
+2020-11-25 10:22:58.407  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfchas been changed his alternative e-mail to: alt@al.v
+2020-11-25 10:22:58.407  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfchas been changed his first name to: Vasya
+2020-11-25 10:22:58.408  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfchas been changed his second name to: VASILEV
+2020-11-25 10:22:58.408  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfchas been changed his teudat zeut to: 333333333
+2020-11-25 10:22:58.503  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfcwas updated 
+2020-11-25 10:24:12.104 ERROR MacBook-Pro --- [nio-8090-exec-6] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfcf ot found.
+2020-11-25 10:25:35.604  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:26:57.220  INFO MacBook-Pro --- [nio-8090-exec-7] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfcwas deleted from DB 2020-11-25
+2020-11-25 10:30:35.617  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:31:31.295  INFO MacBook-Pro --- [nio-8090-exec-1] c.u.s.u.UserServiceImpl                  : added to DB response person with e-mail  liza@ukr.net
+2020-11-25 10:35:35.640  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:35:46.497  INFO MacBook-Pro --- [nio-8090-exec-4] c.u.s.u.UserServiceImpl                  :  list of response persons  was returned [com.users.entity.ResponsePerson@311f91b5]
+2020-11-25 10:40:35.659  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:45:35.675  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:47:43.789  INFO MacBook-Pro --- [nio-8090-exec-2] c.u.s.u.UserServiceImpl                  : added to DB response person with e-mail  kyzya@ukr.net
+2020-11-25 10:50:16.562  INFO MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  :  email for response person  with provided uuid: was updated  to:  va@e.c
+2020-11-25 10:50:16.564  INFO MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  : first name to: response person  with provided uuid: was updated  to: kyzma
+2020-11-25 10:50:16.564  INFO MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  : second name to: response person  with provided uuid: was updated  to: kyzmov
+2020-11-25 10:50:16.564  INFO MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  : teudat zeut to: response person  with provided uuid: was updated  to: 12345676
+2020-11-25 10:50:16.712  INFO MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4e0ee485-8bfe-4902-9374-8a9e57750f44was updated  to: com.users.entity.ResponsePerson@2a1505ad
+2020-11-25 10:50:35.692  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 10:54:51.834  INFO MacBook-Pro --- [nio-8090-exec-7] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4e0ee485-8bfe-4902-9374-8a9e57750f44was deleted 
+2020-11-25 10:55:08.493 ERROR MacBook-Pro --- [nio-8090-exec-9] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4fe0ee485-8bfe-4902-9374-8a9e57750f44 ot found.
+2020-11-25 10:55:29.048 ERROR MacBook-Pro --- [nio-8090-exec-1] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4e0ee485-8bfe-4902-9374-8a9e57750f44 ot found.
+2020-11-25 10:55:35.705  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:00:35.717  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:03:02.153  INFO MacBook-Pro --- [nio-8090-exec-2] c.u.s.u.UserServiceImpl                  : super admin created
+2020-11-25 11:05:35.733  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:10:35.747  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:15:35.759  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:20:35.771  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:27:57.303 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:186)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceHost(DefaultApplicationFactory.java:168)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:103)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:183)
+	... 16 more
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 17 more
+2020-11-25 11:28:05.161  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m28s962ms).
+2020-11-25 11:31:34.744  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:36:34.760  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:41:34.780  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:46:34.796  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:48:25.021  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s742ms).
+2020-11-25 11:52:54.555  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 11:57:54.576  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:00:42.750 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: MacBook-Pro: MacBook-Pro: nodename nor servname provided, or not known
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:186)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceHost(DefaultApplicationFactory.java:168)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:103)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: MacBook-Pro: MacBook-Pro: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:183)
+	... 16 more
+Caused by: java.net.UnknownHostException: MacBook-Pro: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 17 more
+2020-11-25 12:02:39.435 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:186)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceHost(DefaultApplicationFactory.java:168)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:103)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:81)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:183)
+	... 14 more
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 15 more
+2020-11-25 12:02:54.593  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:07:54.611  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:12:54.633  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:17:56.451  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:21:52.599 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: MacBook-Pro: MacBook-Pro: nodename nor servname provided, or not known
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:186)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceHost(DefaultApplicationFactory.java:168)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:103)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: MacBook-Pro: MacBook-Pro: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:183)
+	... 16 more
+Caused by: java.net.UnknownHostException: MacBook-Pro: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 17 more
+2020-11-25 12:22:56.527  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:27:56.587  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:32:56.610  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:37:56.635  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:42:56.652  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:47:56.674  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:52:56.692  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 12:57:56.708  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:02:15.220  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m46s770ms).
+2020-11-25 13:04:14.551  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:09:14.569  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:14:14.588  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 13:16:48.788  INFO MacBook-Pro --- [extShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
+2020-11-25 13:16:48.804  WARN MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Saw local status change event StatusChangeEvent [timestamp=1606303008801, current=DOWN, previous=UP]
+2020-11-25 13:16:48.812  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/user-service:5ebadbbf31f92341c4937c85350e8291: registering service...
+2020-11-25 13:16:48.930  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/user-service:5ebadbbf31f92341c4937c85350e8291 - registration status: 204
+2020-11-25 13:16:51.795  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2020-11-25 13:16:51.817  INFO MacBook-Pro --- [extShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2020-11-25 13:16:51.818  INFO MacBook-Pro --- [extShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.WPzuz6G0SruE-Njcnr17Ag'
+2020-11-25 13:16:54.726  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.WPzuz6G0SruE-Njcnr17Ag.errors' has 1 subscriber(s).
+2020-11-25 13:16:55.644  INFO MacBook-Pro --- [extShutdownHook] o.s.c.s.b.BinderErrorChannel             : Channel 'application-1.springCloudBus.anonymous.WPzuz6G0SruE-Njcnr17Ag.errors' has 0 subscriber(s).
+2020-11-25 13:16:55.902  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-25 13:16:55.904  INFO MacBook-Pro --- [extShutdownHook] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2020-11-25 13:16:55.904  INFO MacBook-Pro --- [extShutdownHook] o.s.i.e.EventDrivenConsumer              : stopped bean '_org.springframework.integration.errorLogger'
+2020-11-25 13:16:56.101  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-11-25 13:16:56.582  INFO MacBook-Pro --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-25 13:16:56.622  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-11-25 13:16:56.622  INFO MacBook-Pro --- [extShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-25 13:16:56.627  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2020-11-25 13:16:56.655  INFO MacBook-Pro --- [extShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2020-11-25 13:16:56.976  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Shutting down DiscoveryClient ...
+2020-11-25 13:17:00.005  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Unregistering ...
+2020-11-25 13:17:00.040  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/user-service:5ebadbbf31f92341c4937c85350e8291 - deregister  status: 200
+2020-11-25 13:17:00.299  INFO MacBook-Pro --- [extShutdownHook] c.n.d.DiscoveryClient                    : Completed shut down of DiscoveryClient
+2020-11-25 14:03:18.811  INFO MacBook-Pro --- [kground-preinit] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 6.1.5.Final
+2020-11-25 14:03:22.765  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-25 14:03:24.662  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=main, version=0b18fd50f3de4fd9d41d2bea1e1ba6a8cd1dc1a9, state=null
+2020-11-25 14:03:24.666  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/user-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-25 14:03:25.234  INFO MacBook-Pro --- [           main] c.u.UserServiceApplication               : No active profile set, falling back to default profiles: default
+2020-11-25 14:03:27.904  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-11-25 14:03:31.204  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-11-25 14:03:33.595  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-25 14:03:33.605  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-11-25 14:03:33.871  INFO MacBook-Pro --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.users.repository.PasswordResetTokenRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-25 14:03:33.909  INFO MacBook-Pro --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.users.repository.RespPersonRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-25 14:03:33.920  INFO MacBook-Pro --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.users.repository.UserRepo. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-11-25 14:03:33.926  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 309ms. Found 0 JDBC repository interfaces.
+2020-11-25 14:03:33.955  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-25 14:03:33.960  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-25 14:03:35.221  INFO MacBook-Pro --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1248ms. Found 3 JPA repository interfaces.
+2020-11-25 14:03:35.424  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-11-25 14:03:35.982  WARN MacBook-Pro --- [           main] o.s.b.a.e.EndpointId                     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-25 14:03:37.950  INFO MacBook-Pro --- [           main] o.s.c.c.s.GenericScope                   : BeanFactory id=8c639c1f-686d-3f5c-90d3-f0a69a3bc51a
+2020-11-25 14:03:38.062  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-11-25 14:03:38.090  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-11-25 14:03:38.106  INFO MacBook-Pro --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-11-25 14:03:39.599  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-25 14:03:39.620  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-25 14:03:40.101  INFO MacBook-Pro --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-25 14:03:44.655  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2020-11-25 14:03:44.723  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2020-11-25 14:03:44.725  INFO MacBook-Pro --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-11-25 14:03:44.725  INFO MacBook-Pro --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-25 14:03:47.344  INFO MacBook-Pro --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-11-25 14:03:47.346  INFO MacBook-Pro --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 21987 ms
+2020-11-25 14:03:48.869  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-25 14:03:48.870  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 14:03:49.007  INFO MacBook-Pro --- [           main] c.n.c.DynamicPropertyFactory             : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@259195fe
+2020-11-25 14:03:54.604  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.ServletEndpointRegistrar     : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-11-25 14:03:57.303  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-25 14:03:59.314  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-25 14:04:00.009  INFO MacBook-Pro --- [         task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-25 14:04:01.039  INFO MacBook-Pro --- [         task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-25 14:04:02.007  WARN MacBook-Pro --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-25 14:04:02.586  INFO MacBook-Pro --- [         task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-25 14:04:04.311  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-11-25 14:04:07.321  INFO MacBook-Pro --- [         task-1] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-11-25 14:04:07.762  INFO MacBook-Pro --- [         task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-11-25 14:04:09.025  INFO MacBook-Pro --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56d5460f, org.springframework.security.web.context.SecurityContextPersistenceFilter@fefb66c, org.springframework.security.web.header.HeaderWriterFilter@20fa5277, org.springframework.web.filter.CorsFilter@57f725b8, org.springframework.security.web.authentication.logout.LogoutFilter@2ace1cd3, com.users.security.AuthenticationFilter@4a0c512b, com.users.security.AuthorizationFilter@28bc9749, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33568e26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a021f49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54a5496f, org.springframework.security.web.session.SessionManagementFilter@3292eff7, org.springframework.security.web.access.ExceptionTranslationFilter@24954e82, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18ca9277]
+2020-11-25 14:04:09.220  WARN MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : No URLs will be polled as dynamic configuration sources.
+2020-11-25 14:04:09.222  INFO MacBook-Pro --- [           main] c.n.c.s.URLConfigurationSource           : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-11-25 14:04:16.008  INFO MacBook-Pro --- [           main] onConfiguration$FunctionBindingRegistrar : Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-11-25 14:04:16.075  INFO MacBook-Pro --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-25 14:04:16.228  INFO MacBook-Pro --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-25 14:04:21.431  INFO MacBook-Pro --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-11-25 14:04:26.690  WARN MacBook-Pro --- [           main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-25 14:04:28.932  INFO MacBook-Pro --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 24 endpoint(s) beneath base path '/actuator'
+2020-11-25 14:04:30.806  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2020-11-25 14:04:31.300  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-11-25 14:04:31.322  INFO MacBook-Pro --- [           main] o.s.i.c.PublishSubscribeChannel          : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-11-25 14:04:31.337  INFO MacBook-Pro --- [           main] o.s.i.e.EventDrivenConsumer              : started bean '_org.springframework.integration.errorLogger'
+2020-11-25 14:04:32.160  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8012
+2020-11-25 14:04:33.925  INFO MacBook-Pro --- [           main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=main, version=0b18fd50f3de4fd9d41d2bea1e1ba6a8cd1dc1a9, state=null
+2020-11-25 14:04:33.925  INFO MacBook-Pro --- [           main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/user-service.properties'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/smilyk/briut.git/application.properties'}]
+2020-11-25 14:04:34.940  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-25 14:04:38.497  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-25 14:04:38.730 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-25 14:04:39.375  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2020-11-25 14:04:39.498  INFO MacBook-Pro --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1a3c4b3e:0/SimpleConnection@3ad80206 [delegate=amqp://user@127.0.0.1:5672/, localPort= 53473]
+2020-11-25 14:04:39.741  INFO MacBook-Pro --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusOutput' has 1 subscriber(s).
+2020-11-25 14:04:39.823  INFO MacBook-Pro --- [           main] o.s.c.n.e.InstanceInfoFactory            : Setting initial instance status as: STARTING
+2020-11-25 14:04:40.375  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Initializing Eureka in region us-east-1
+2020-11-25 14:04:41.285  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON encoding codec LegacyJacksonJson
+2020-11-25 14:04:41.286  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using JSON decoding codec LegacyJacksonJson
+2020-11-25 14:04:44.408  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML encoding codec XStreamXml
+2020-11-25 14:04:44.408  INFO MacBook-Pro --- [           main] c.n.d.p.DiscoveryJerseyProvider          : Using XML decoding codec XStreamXml
+2020-11-25 14:04:48.642 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-25 14:04:49.378  INFO MacBook-Pro --- [           main] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:04:50.423  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Disable delta property : false
+2020-11-25 14:04:50.426  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Single vip registry refresh property : null
+2020-11-25 14:04:50.426  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Force full registry fetch : false
+2020-11-25 14:04:50.427  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application is null : false
+2020-11-25 14:04:50.427  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Registered Applications size is zero : true
+2020-11-25 14:04:50.428  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Application version is -1: true
+2020-11-25 14:04:50.428  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Getting all instance registry info from the eureka server
+2020-11-25 14:04:54.228  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : The response status is 200
+2020-11-25 14:04:54.235  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Starting heartbeat executor: renew interval is: 30
+2020-11-25 14:04:54.309  INFO MacBook-Pro --- [           main] c.n.d.InstanceInfoReplicator             : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-11-25 14:04:54.378  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Discovery Client initialized at timestamp 1606305894358 with initial instances count: 2
+2020-11-25 14:04:54.683  INFO MacBook-Pro --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2020-11-25 14:04:54.686  INFO MacBook-Pro --- [           main] c.n.d.DiscoveryClient                    : Saw local status change event StatusChangeEvent [timestamp=1606305894686, current=UP, previous=STARTING]
+2020-11-25 14:04:54.744  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/user-service:b0bb6cab32c3bd8185c5790e95af4599: registering service...
+2020-11-25 14:04:54.986  INFO MacBook-Pro --- [nfoReplicator-0] c.n.d.DiscoveryClient                    : DiscoveryClient_USER-SERVICE/user-service:b0bb6cab32c3bd8185c5790e95af4599 - registration status: 204
+2020-11-25 14:04:55.965  INFO MacBook-Pro --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.fiSQ1ZchSWWHqE01TlwXVg, bound to: springCloudBus
+2020-11-25 14:04:57.266  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.fiSQ1ZchSWWHqE01TlwXVg.errors' has 1 subscriber(s).
+2020-11-25 14:04:57.269  INFO MacBook-Pro --- [           main] o.s.c.s.b.BinderErrorChannel             : Channel 'springCloudBus.anonymous.fiSQ1ZchSWWHqE01TlwXVg.errors' has 2 subscriber(s).
+2020-11-25 14:04:58.623  INFO MacBook-Pro --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.fiSQ1ZchSWWHqE01TlwXVg'
+2020-11-25 14:04:58.628  INFO MacBook-Pro --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2020-11-25 14:04:58.635 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-25 14:04:59.265  INFO MacBook-Pro --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2020-11-25 14:04:59.280  INFO MacBook-Pro --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2020-11-25 14:04:59.361  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-25 14:04:59.375  INFO MacBook-Pro --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-25 14:05:01.577  INFO MacBook-Pro --- [           main] c.u.UserServiceApplication               : Started UserServiceApplication in 105.283 seconds (JVM running for 113.229)
+2020-11-25 14:05:08.766  WARN MacBook-Pro --- [gistrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=user-service, managementUrl=http://macbook-pro:8090/actuator, healthUrl=http://macbook-pro:8090/actuator/health, serviceUrl=http://macbook-pro:8090/) at spring-boot-admin ([http://localhost:9999/instances]): I/O error on POST request for "http://localhost:9999/instances": Connect to localhost:9999 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:9999 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused (Connection refused). Further attempts are logged on DEBUG level
+2020-11-25 14:09:50.555  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:14:50.572  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:19:50.589  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:24:50.605  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 14:33:13.643 ERROR MacBook-Pro --- [gistrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+java.lang.IllegalArgumentException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:186)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceHost(DefaultApplicationFactory.java:168)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:103)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63)
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getManagementUrl(DefaultApplicationFactory.java:122)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80)
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1506)
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalHost(DefaultApplicationFactory.java:183)
+	... 15 more
+Caused by: java.net.UnknownHostException: MacBook-Pro.local: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1501)
+	... 16 more
+2020-11-25 14:33:24.044  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m46s384ms).
+2020-11-25 14:58:23.181  WARN MacBook-Pro --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m29s120ms).
+2020-11-25 15:00:06.101  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:05:06.122  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:10:06.134  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:15:06.154  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:20:06.174  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:25:06.198  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:30:06.216  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:33:52.830  INFO MacBook-Pro --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-25 15:33:52.836  INFO MacBook-Pro --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2020-11-25 15:33:58.234  INFO MacBook-Pro --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 5394 ms
+2020-11-25 15:34:19.270 ERROR MacBook-Pro --- [nio-8090-exec-3] c.u.s.v.ValidatorServiceImpl             : USER_WITH_EMAIL_EXISTS smilyk1982@gmail.com
+2020-11-25 15:34:19.923  INFO MacBook-Pro --- [nio-8090-exec-4] c.u.s.u.UserServiceImpl                  : new token for changing password was send to email smilyk1982@gmail.com
+2020-11-25 15:34:20.771  WARN MacBook-Pro --- [ender@64757d56}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2020-11-25 15:34:20.772  WARN MacBook-Pro --- [ender@64757d56}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 4 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748)
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142)
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132)
+	at zipkin2.Call$Base.execute(Call.java:380)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:284)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:358)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:64)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:770)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:740)
+	... 9 more
+2020-11-25 15:34:26.511  INFO MacBook-Pro --- [io-8090-exec-10] c.u.s.u.UserServiceImpl                  : user with provided uuid: 41cc2c52-9034-4cdd-8a25-6da524d42bcfwas returned.
+2020-11-25 15:34:26.633 ERROR MacBook-Pro --- [nio-8090-exec-1] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfc ot found.
+2020-11-25 15:34:26.718 ERROR MacBook-Pro --- [nio-8090-exec-2] c.u.s.u.UserServiceImpl                  : user with provided uuid: 888c2721-1f6c-4a7a-8e49-61bf3a75dcfc ot found.
+2020-11-25 15:34:27.375  INFO MacBook-Pro --- [nio-8090-exec-3] c.u.s.u.UserServiceImpl                  : added to DB response person with e-mail  kyzya@ukr.net
+2020-11-25 15:34:27.525 ERROR MacBook-Pro --- [nio-8090-exec-4] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4e0ee485-8bfe-4902-9374-8a9e57750f44 ot found.
+2020-11-25 15:34:27.619 ERROR MacBook-Pro --- [nio-8090-exec-5] c.u.s.u.UserServiceImpl                  : response person  with provided uuid: 4e0ee485-8bfe-4902-9374-8a9e57750f44 ot found.
+2020-11-25 15:35:06.235  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:40:06.261  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:45:06.275  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration
+2020-11-25 15:50:06.291  INFO MacBook-Pro --- [trap-executor-0] c.n.d.s.r.a.ConfigClusterResolver        : Resolving eureka endpoints via configuration

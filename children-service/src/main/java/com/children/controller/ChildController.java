@@ -27,14 +27,14 @@ public class ChildController {
     ValidatorService validatorService;
     @Autowired
     ChildServiceImpl childService;
-
+//checkd
     @PostMapping()
     public Response createChild(@Valid @RequestBody AddChildDto childDetails) {
         validatorService.checkUniqueTZ(childDetails.getTz());
         return childService.addChild(childDetails);
     }
 
-
+    //cheked
     @GetMapping(path = "/{uuidChild}")
     public Response getChild(@PathVariable String uuidChild) {
         ResponseChildDto childDto = childService.getChildByUuid(uuidChild);
@@ -47,12 +47,13 @@ public class ChildController {
 //        return new Response(checkChidProfile,HttpServletResponse.SC_OK, currentDate);
 //    }
 
+    //cheked
     @PutMapping(path = "/{uuidChild}")
     public Response updateChild(@PathVariable String uuidChild,  @Valid @RequestBody UpdateChildDto childDetails) {
         UpdateChildDto updateChild = childService.updateChild(uuidChild, childDetails);
         return new Response(updateChild,HttpServletResponse.SC_OK, currentDate);
     }
-
+//checked
     @DeleteMapping(path = "/{uuidChild}")
     public Response deleteChild(@PathVariable String uuidChild) {
         OperationStatusModel returnValue = new OperationStatusModel();
@@ -66,7 +67,7 @@ public class ChildController {
         return new Response(returnValue, HttpServletResponse.SC_OK, currentDate);
     }
 
-
+//cheked
     @GetMapping()
     public Response getAllChildes(@RequestParam(value = "page", defaultValue = "0") int page,
                                   @RequestParam(value = "limit", defaultValue = "2") int limit) {

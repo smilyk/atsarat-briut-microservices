@@ -1,4 +1,4 @@
-package com.tsofim.security;
+package com.school.security;
 
 
 import io.jsonwebtoken.Jwts;
@@ -61,6 +61,7 @@ public class AuthorizationFilter extends BasicAuthenticationFilter {
         if (userId == null) {
             return null;
         }
+
         return new UsernamePasswordAuthenticationToken(userId, null, new ArrayList<>());
 
     }

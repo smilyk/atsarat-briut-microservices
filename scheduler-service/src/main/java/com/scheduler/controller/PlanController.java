@@ -40,7 +40,7 @@ public class PlanController {
     @PostMapping()
     public Response createPlanDetails(@Valid @RequestBody AddPlanDto planDetails) {
 
-        validatorService.checkService(planDetails);
+//        validatorService.checkService(planDetails);
         return planService.addPlanDetails(planDetails);
     }
 
