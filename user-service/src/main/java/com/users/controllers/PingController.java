@@ -13,12 +13,10 @@ import java.time.LocalDateTime;
 public class PingController {
     private String currentDate = LocalDateTime.now().toLocalDate().toString();
 
-    @Value("${tokenSecret}")
-    String port;
 
     @GetMapping()
     public String ping() {
 
-        return " Users-Service working " + currentDate + " secret word is: " + port;
+        return " Users-Service working " + currentDate;
     }
 }

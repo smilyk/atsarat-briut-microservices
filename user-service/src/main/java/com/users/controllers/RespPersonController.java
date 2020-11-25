@@ -28,24 +28,25 @@ public class RespPersonController {
     @Autowired
     RespPersonServiceImpl respPerson;
 
+//    checked
     @PostMapping()
     public Response createRespPerson(@Valid @RequestBody AddRespPersonDto respPersonDetails) {
         validatorService.checkRespPersonUniqueEmail(respPersonDetails.getEmailRespPerson());
         return respPerson.addResponsePerson(respPersonDetails);
     }
-
+    //    checked
     @PutMapping()
     public Response updateRespPerson(@Valid @RequestBody RepsoncePersonDto respPersonDetails) {
         RepsoncePersonDto updatedPerson = respPerson.updateResponsePerson(respPersonDetails);
         return new Response(updatedPerson, HttpServletResponse.SC_FOUND, currentDate);
     }
-
+    //    checked
     @GetMapping(path = "/{uuidRespPerson}")
     public Response getResponsePersonByUuid(@PathVariable String uuidRespPerson) {
         RepsoncePersonDto repsoncePersonDto = respPerson.getRespPersonByUuid(uuidRespPerson);
         return new Response(repsoncePersonDto, HttpServletResponse.SC_FOUND, currentDate);
     }
-
+    //    checked
     @DeleteMapping(path = "/{uuidRespPerson}")
     public Response deleteResponsePerson(@PathVariable String uuidRespPerson) {
         OperationStatusModel returnValue = new OperationStatusModel();
@@ -59,7 +60,7 @@ public class RespPersonController {
         return new Response(returnValue, HttpServletResponse.SC_OK, currentDate);
     }
 
-
+    //    checked
     @GetMapping()
     public Response getAllResponsePersons(@RequestParam(value = "page", defaultValue = "0") int page,
                                    @RequestParam(value = "limit", defaultValue = "2") int limit) {

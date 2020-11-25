@@ -46,18 +46,18 @@ public class UserController {
         return new Response(userDto, HttpServletResponse.SC_FOUND, currentDate);
     }
 
-    @GetMapping(path = "/check/{uuidUser}")
-    public Response checkUserProfile(@PathVariable String uuidUser){
-        UserProfileDto userProfileDto = userService.checkUsersProfile(uuidUser);
-        return new Response(userProfileDto,HttpServletResponse.SC_OK, currentDate);
-    }
-
+//    @GetMapping(path = "/check/{uuidUser}")
+//    public Response checkUserProfile(@PathVariable String uuidUser){
+//        UserProfileDto userProfileDto = userService.checkUsersProfile(uuidUser);
+//        return new Response(userProfileDto,HttpServletResponse.SC_OK, currentDate);
+//    }
+//    checked
     @PutMapping(path = "/{id}")
     public Response updateUser(@PathVariable String id,  @Valid @RequestBody UpdateUserDto userDetails) {
         UpdateUserDto updateUser = userService.updateUser(id, userDetails);
         return new Response(updateUser,HttpServletResponse.SC_OK, currentDate);
     }
-
+    //    checked
     @DeleteMapping(path = "/{id}")
     public Response deleteUser(@PathVariable String id) {
         OperationStatusModel returnValue = new OperationStatusModel();
@@ -71,7 +71,7 @@ public class UserController {
         return new Response(returnValue, HttpServletResponse.SC_OK, currentDate);
     }
 //
-
+//    checked
     @GetMapping()
     public Response getUsers(@RequestParam(value = "page", defaultValue = "0") int page,
                                    @RequestParam(value = "limit", defaultValue = "2") int limit) {
