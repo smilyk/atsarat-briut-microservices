@@ -26,7 +26,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.headers().frameOptions().disable();
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, environment.getProperty("api.email.verification.url.path")).permitAll()
+                .antMatchers(HttpMethod.GET, environment.getProperty("api.email.verification.url.path")).permitAll()
                 .antMatchers(HttpMethod.POST, environment.getProperty("api.registration.url.path")).permitAll()
                 .antMatchers(HttpMethod.POST, environment.getProperty("api.login.url.path")).permitAll()
                 .antMatchers(HttpMethod.POST, environment.getProperty("api.change-password.request.url.path")).permitAll()

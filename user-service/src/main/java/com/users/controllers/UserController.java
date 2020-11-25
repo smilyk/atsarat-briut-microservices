@@ -31,6 +31,7 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
 
+//    checked
     @PostMapping()
     public Response createUser(@Valid @RequestBody AddUserDto userDetails) {
         validatorService.checkUniqueEmail(userDetails.getMainEmail());
@@ -38,7 +39,7 @@ public class UserController {
         return userService.addUser(userDetails);
     }
 
-
+    //    checked
     @GetMapping(path = "/{uuidUser}")
     public Response getUser(@PathVariable String uuidUser) {
         UserResponseDto userDto = userService.getUserByUserId(uuidUser);
@@ -80,6 +81,7 @@ public class UserController {
         List<UserResponseDto> returnValue = new ModelMapper().map(users, listType);
         return new Response(returnValue, HttpServletResponse.SC_FOUND, currentDate);
     }
+    //    checked
     /**
      * email-verification - confirm-email
      * http://localhost:8080/users/email-verification?token=sdfsdf
@@ -97,6 +99,7 @@ public class UserController {
 
         return new Response(returnValue, HttpServletResponse.SC_OK, currentDate);
     }
+    //    checked
     /**
      * step-1 for change password
      * http://localhost:8090/users/password-reset-request
@@ -116,7 +119,7 @@ public class UserController {
 
         return returnValue;
     }
-
+//    checked
     /**    step-2 for change password */
     @PostMapping(path = "/password-reset")
     public OperationStatusModel resetPassword(@RequestBody PasswordResetModel passwordResetModel) {
